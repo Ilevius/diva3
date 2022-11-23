@@ -1,0 +1,32 @@
+&media
+cp(1) = 2.026d0,
+cp(2) = 3.065d0,
+cs(1) = 1d0,
+cs(2) = 1.54d0,
+rho(1) = 1d0,
+rho(2) = 0.57d0,
+h = 1d0
+/
+&study
+mode = 'polar',
+singleF = 31.07d0,
+singlePsi = 60,
+psiMin = 30d0,
+psiNumber = 240,
+psiStep = 0.5d0,
+singleR = 14d0,
+Rmin = 10d0,
+Rstep = 0.2d0,
+Rmax = 70d0
+/
+&dinn5Settings
+t1 = 0d0, 
+t2 = 0d0, 
+t3 = 0d0, 
+t4 = 0d0, 
+tm = 2d-2, 
+tp = 0d0, 
+eps = 1d-5, 
+step = 1d-2, 
+IntLimit = 1d4
+/
