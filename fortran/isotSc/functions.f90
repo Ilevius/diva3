@@ -9,6 +9,7 @@ MODULE functions
         FUNCTION matrixA(alfa, kappa, kappaCap, lambda, mu)
         real*8 kappa(2), kappaCap(2), lambda(2), mu(2)
         complex*16 matrixA(4,4), sigma(2), sigmaCap(2), alfa
+        !alfa=1d0;
             sigma = makeSigma(kappa, alfa)
             sigmaCap = makeSigma(kappaCap, alfa)
             ! elements defining
