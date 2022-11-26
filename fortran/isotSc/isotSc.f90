@@ -72,16 +72,16 @@ PROGRAM isotSc
             allocate(x(pointsNumber), z(pointsNumber));
             do i = 1, pointsNumber
                 x(i) = singleR*cosd((i - 1)*psiStep + psiMin) 
-                z(i) = singleR*sind((i - 1)*psiStep + psiMin) - 2d0*h
+                z(i) = singleR*sind((i - 1)*psiStep + psiMin) - h!2d0*h
             enddo    
         endif
             
 
                  
-        call dinn5(uss_integrand_vert,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_vert)
-        call dinn5(uss_integrand_horis,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_horis)
+        call dinn5(ups_integrand_vert,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_vert)
+        call dinn5(ups_integrand_horis,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_horis)
         
-        call uss_stPhase(pointsNumber, psis, Rs, kappa, kappaCap, lambda(1), lambda(2), mu(1), mu(2), stPhase)
+        call usp_stPhase(pointsNumber, psis, Rs, kappa, kappaCap, lambda(1), lambda(2), mu(1), mu(2), stPhase)
         
         open(1, file='integral.txt', FORM='FORMATTED')
         write(1,*) "%psi, re(u), im(u), abs(u), re(w), im(w), abs(w)"
@@ -95,8 +95,9 @@ PROGRAM isotSc
         close(1); close(2);
         
     CONTAINS
-    
-        SUBROUTINE uss_integrand_horis(alfa, s, n)
+    !                                                   *   *   *   
+    !                                                      u_pp
+        SUBROUTINE upp_integrand_horis(alfa, s, n)
         implicit none;
         integer n, i
         complex*16 alfa, s(n), sigma(2), no_x_part_minus, no_x_part_plus 
@@ -107,11 +108,11 @@ PROGRAM isotSc
             s(i) = no_x_part_plus*exp(-sigma(1)*(z(i)+2d0*h)-ci*alfa*x(i))   
             s(i) = s(i) + no_x_part_minus*exp(-sigma(1)*(z(i)+2d0*h)+ci*alfa*x(i))
             s(i) = s(i)/(2d0*pi)
-            enddo   
-            
-        END SUBROUTINE uss_integrand_horis
+            enddo     
+        END SUBROUTINE upp_integrand_horis
+        
     
-        SUBROUTINE uss_integrand_vert(alfa, s, n)
+        SUBROUTINE upp_integrand_vert(alfa, s, n)
         implicit none;
         integer n, i
         complex*16 alfa, s(n), sigma(2), no_x_part_minus, no_x_part_plus  
@@ -123,11 +124,10 @@ PROGRAM isotSc
             s(i) = s(i) + no_x_part_minus*exp(-sigma(1)*(z(i)+2d0*h)+ci*alfa*x(i))
             s(i) = s(i)/(2d0*pi)
             enddo    
-        END SUBROUTINE uss_integrand_vert
-        
+        END SUBROUTINE upp_integrand_vert
     
 
-        SUBROUTINE uss_stPhase(pointsNumber, psis, Rs, kappa, kappaCap, lambda, lambdaCap, mu, muCap, theResult)
+        SUBROUTINE upp_stPhase(pointsNumber, psis, Rs, kappa, kappaCap, lambda, lambdaCap, mu, muCap, theResult)
         implicit none
         integer pointsNumber
         real*8 psis(pointsNumber), Rs(pointsNumber), kappa(2), kappaCap(2), lambda, lambdaCap, mu, muCap
@@ -141,7 +141,158 @@ PROGRAM isotSc
                 theResult(1,i) = commonRes*(-ci*alfa0)
                 theResult(2,i) = commonRes*(-sigma(1))    
             enddo      
-        END SUBROUTINE uss_stPhase       
+        END SUBROUTINE upp_stPhase  
+        
+        
+        !                                                   *   *   *   
+        !                                                      u_ps
+        SUBROUTINE ups_integrand_horis(alfa, s, n)
+        implicit none;
+        integer n, i
+        complex*16 alfa, s(n), sigma(2), no_x_part_minus, no_x_part_plus 
+            sigma = makeSigma(kappa, alfa)
+            no_x_part_plus = CramDelta(2, 1, kappa, kappaCap, lambda, mu, alfa)*(-ci*alfa)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa) 
+            no_x_part_minus = CramDelta(2, 1, kappa, kappaCap, lambda, mu, -alfa)*(ci*alfa)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, -alfa)
+            do i = 1, n
+                s(i) = no_x_part_plus*exp(-sigma(2)*(z(i)+h)-sigma(1)*h-ci*alfa*x(i))   
+                s(i) = s(i) + no_x_part_minus*exp(-sigma(2)*(z(i)+h)-sigma(1)*h+ci*alfa*x(i))
+                s(i) = s(i)/(2d0*pi)
+            enddo     
+        END SUBROUTINE ups_integrand_horis
+        
+    
+        SUBROUTINE ups_integrand_vert(alfa, s, n)
+        implicit none;
+        integer n, i
+        complex*16 alfa, s(n), sigma(2), no_x_part_minus, no_x_part_plus  
+            sigma = makeSigma(kappa, alfa)
+            no_x_part_plus = CramDelta(2, 1, kappa, kappaCap, lambda, mu, alfa)*(-sigma(1))/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa)
+            no_x_part_minus = CramDelta(2, 1, kappa, kappaCap, lambda, mu, -alfa)*(-sigma(1))/CramDelta(0, 0, kappa, kappaCap, lambda, mu, -alfa)
+            do i = 1, n
+                s(i) = no_x_part_plus*exp(-sigma(2)*(z(i)+h)-sigma(1)*h-ci*alfa*x(i))   
+                s(i) = s(i) + no_x_part_minus*exp(-sigma(2)*(z(i)+h)-sigma(1)*h+ci*alfa*x(i))
+                s(i) = s(i)/(2d0*pi)
+            enddo    
+        END SUBROUTINE ups_integrand_vert
+    
+
+        SUBROUTINE ups_stPhase(pointsNumber, psis, Rs, kappa, kappaCap, lambda, lambdaCap, mu, muCap, theResult)
+        implicit none
+        integer pointsNumber
+        real*8 psis(pointsNumber), Rs(pointsNumber), kappa(2), kappaCap(2), lambda, lambdaCap, mu, muCap
+        complex*16 theResult(2, pointsNumber)  
+        integer i
+        complex*16 alfa0, sigma(2), commonRes
+            do i = 1, pointsNumber
+                alfa0 = -cosd(psis(i))*kappa(1)
+                sigma = makeSigma(kappa, alfa0)
+                commonRes = sqrt(kappa(1)*sind(psis(i))**2/(2d0*pi*Rs(i)))*CramDelta(1, 1, kappa, kappaCap, lambda, mu, alfa0)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa0)*exp(ci*Rs(i)*kappa(1) - ci*pi/4)
+                theResult(1,i) = commonRes*(-ci*alfa0)
+                theResult(2,i) = commonRes*(-sigma(1))    
+            enddo      
+        END SUBROUTINE ups_stPhase  
+        
+        
+        
+        !                                                     *  *  *    
+        !                                                       u_sp 
+        
+        SUBROUTINE usp_integrand_horis(alfa, s, n)
+        implicit none;
+        integer n, i
+        complex*16 alfa, s(n), sigma(2), no_x_part_minus, no_x_part_plus 
+            sigma = makeSigma(kappa, alfa)
+            no_x_part_plus = CramDelta(1, 2, kappa, kappaCap, lambda, mu, alfa)*(-sigma(2))/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa) 
+            no_x_part_minus = CramDelta(1, 2, kappa, kappaCap, lambda, mu, -alfa)*(-sigma(2))/CramDelta(0, 0, kappa, kappaCap, lambda, mu, -alfa)
+            do i = 1, n
+            s(i) = no_x_part_plus*exp(-sigma(1)*(z(i)+h)-sigma(2)*h-ci*alfa*x(i))   
+            s(i) = s(i) + no_x_part_minus*exp(-sigma(1)*(z(i)+h)-sigma(2)*h+ci*alfa*x(i))
+            s(i) = s(i)/(2d0*pi)
+            enddo     
+        END SUBROUTINE usp_integrand_horis
+        
+    
+        SUBROUTINE usp_integrand_vert(alfa, s, n)
+        implicit none;
+        integer n, i
+        complex*16 alfa, s(n), sigma(2), no_x_part_minus, no_x_part_plus  
+            sigma = makeSigma(kappa, alfa)
+            no_x_part_plus = CramDelta(1, 2, kappa, kappaCap, lambda, mu, alfa)*(-ci*alfa)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa)
+            no_x_part_minus = CramDelta(1, 2, kappa, kappaCap, lambda, mu, -alfa)*(ci*alfa)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, -alfa)
+            do i = 1, n
+            s(i) = no_x_part_plus*exp(-sigma(1)*(z(i)+h)-sigma(2)*h-ci*alfa*x(i))   
+            s(i) = s(i) + no_x_part_minus*exp(-sigma(1)*(z(i)+h)-sigma(2)*h+ci*alfa*x(i))
+            s(i) = s(i)/(2d0*pi)
+            enddo    
+        END SUBROUTINE usp_integrand_vert
+        
+    
+        SUBROUTINE usp_stPhase(pointsNumber, psis, Rs, kappa, kappaCap, lambda, lambdaCap, mu, muCap, theResult)
+        implicit none
+        integer pointsNumber
+        real*8 psis(pointsNumber), Rs(pointsNumber), kappa(2), kappaCap(2), lambda, lambdaCap, mu, muCap
+        complex*16 theResult(2, pointsNumber)  
+        integer i
+        complex*16 alfa0, sigma(2), commonRes
+            do i = 1, pointsNumber
+                alfa0 = -cosd(psis(i))*kappa(2)
+                sigma = makeSigma(kappa, alfa0)
+                commonRes = sqrt(kappa(2)*sind(psis(i))**2/(2d0*pi*Rs(i)))*CramDelta(2, 2, kappa, kappaCap, lambda, mu, alfa0)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa0)*exp(ci*Rs(i)*kappa(2) - ci*pi/4)
+                theResult(1,i) = commonRes*(-sigma(2))
+                theResult(2,i) = commonRes*(-ci*alfa0)    
+            enddo      
+        END SUBROUTINE usp_stPhase 
+        
+        
+        
+        !                                                     *  *  *    
+        !                                                       u_ss 
+        
+        SUBROUTINE uss_integrand_horis(alfa, s, n)
+        implicit none;
+        integer n, i
+        complex*16 alfa, s(n), sigma(2), no_x_part_minus, no_x_part_plus 
+            sigma = makeSigma(kappa, alfa)
+            no_x_part_plus = CramDelta(2, 2, kappa, kappaCap, lambda, mu, alfa)*(-sigma(2))/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa) 
+            no_x_part_minus = CramDelta(2, 2, kappa, kappaCap, lambda, mu, -alfa)*(-sigma(2))/CramDelta(0, 0, kappa, kappaCap, lambda, mu, -alfa)
+            do i = 1, n
+            s(i) = no_x_part_plus*exp(-sigma(2)*(z(i)+2d0*h)-ci*alfa*x(i))   
+            s(i) = s(i) + no_x_part_minus*exp(-sigma(2)*(z(i)+2d0*h)+ci*alfa*x(i))
+            s(i) = s(i)/(2d0*pi)
+            enddo     
+        END SUBROUTINE uss_integrand_horis
+        
+    
+        SUBROUTINE uss_integrand_vert(alfa, s, n)
+        implicit none;
+        integer n, i
+        complex*16 alfa, s(n), sigma(2), no_x_part_minus, no_x_part_plus  
+            sigma = makeSigma(kappa, alfa)
+            no_x_part_plus = CramDelta(2, 2, kappa, kappaCap, lambda, mu, alfa)*(-ci*alfa)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa)
+            no_x_part_minus = CramDelta(2, 2, kappa, kappaCap, lambda, mu, -alfa)*(ci*alfa)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, -alfa)
+            do i = 1, n
+            s(i) = no_x_part_plus*exp(-sigma(2)*(z(i)+2d0*h)-ci*alfa*x(i))   
+            s(i) = s(i) + no_x_part_minus*exp(-sigma(2)*(z(i)+2d0*h)+ci*alfa*x(i))
+            s(i) = s(i)/(2d0*pi)
+            enddo    
+        END SUBROUTINE uss_integrand_vert
+        
+    
+        SUBROUTINE uss_stPhase(pointsNumber, psis, Rs, kappa, kappaCap, lambda, lambdaCap, mu, muCap, theResult)
+        implicit none
+        integer pointsNumber
+        real*8 psis(pointsNumber), Rs(pointsNumber), kappa(2), kappaCap(2), lambda, lambdaCap, mu, muCap
+        complex*16 theResult(2, pointsNumber)  
+        integer i
+        complex*16 alfa0, sigma(2), commonRes
+            do i = 1, pointsNumber
+                alfa0 = -cosd(psis(i))*kappa(2)
+                sigma = makeSigma(kappa, alfa0)
+                commonRes = sqrt(kappa(2)*sind(psis(i))**2/(2d0*pi*Rs(i)))*CramDelta(2, 2, kappa, kappaCap, lambda, mu, alfa0)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa0)*exp(ci*Rs(i)*kappa(2) - ci*pi/4)
+                theResult(1,i) = commonRes*(-sigma(2))
+                theResult(2,i) = commonRes*(-ci*alfa0)    
+            enddo      
+        END SUBROUTINE uss_stPhase 
             
     END PROGRAM isotSc
 
