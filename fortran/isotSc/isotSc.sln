@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{6989167D-11E4-40FE-8C1A-2192A86A7E90}") = "isotSc", "isotSc.vfproj", "{AD57D431-ADAD-46FD-8772-B1E44C0ADB99}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8035AA45-C271-4CF6-9940-09864725FBD3}"
+	ProjectSection(SolutionItems) = preProject
+		Halfc.f90 = Halfc.f90
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86

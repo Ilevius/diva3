@@ -138,7 +138,7 @@ MODULE functions
         real*8 kappa(2), kappaCap(2), lambda(2), mu(2)
         complex*16 CramDelta, alfa, matrix(4,4), column(4,1)
         complex*16 C(4,4), S(4), SM(4)
-     
+            !alfa = 1d0
             matrix = matrixA(alfa, kappa, kappaCap, lambda, mu)         
             if (i>0 .AND. j>0) then 
                 column = partB(j, mu(1), lambda(1), kappa, alfa)
@@ -147,6 +147,59 @@ MODULE functions
             call DSTAR(matrix,C,S,SM,CramDelta,4,4,2)      
         END FUNCTION CramDelta
         
+        
+        
+        FUNCTION ThetaPS(alfa, h, R, kappa, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), psi
+            real*8  ThetaPS   
+                ThetaPS = sqrt( kappa(2)**2 - alfa**2 )*sind(psi) + sqrt(kappa(1)**2 - alfa**2)*h/R - sqrt(kappa(2)**2 - alfa**2)*h/R - alfa*cosd(psi)
+        END FUNCTION ThetaPS
+        
+
+        FUNCTION DThetaPS(alfa, h, R, kappa, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), psi
+            real*8  DThetaPS, den1, den2   
+                den1 = 1d0/sqrt(kappa(1)**2 - alfa**2); den2 = 1d0/sqrt(kappa(2)**2 - alfa**2);
+                DThetaPS = h/R*alfa*den2 - alfa*sind(psi)*den2 - h/R*alfa*den1 - cosd(psi)
+        END FUNCTION DThetaPS
+        
+        
+        FUNCTION D2ThetaPS(alfa, h, R, kappa, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), psi
+            real*8  D2ThetaPS, den1, den2   
+                den1 = 1d0/(sqrt(kappa(1)**2 - alfa**2))**3; den2 = 1d0/(sqrt(kappa(2)**2 - alfa**2))**3;
+                D2ThetaPS = h/R*kappa(2)**2*den2 - h/R*kappa(1)**2*den1 - kappa(2)**2*sind(psi)*den2
+        END FUNCTION D2ThetaPS
+        
+        !!                       usp               Phase function and its derivatives
+        !!                                                   *   *   *
+        FUNCTION ThetaSP(alfa, h, R, kappa, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), psi
+            real*8  ThetaSP   
+                ThetaSP = sqrt( kappa(1)**2 - alfa**2 )*sind(psi) - sqrt(kappa(1)**2 - alfa**2)*h/R + sqrt(kappa(2)**2 - alfa**2)*h/R - alfa*cosd(psi)
+        END FUNCTION ThetaSP
+        
+
+        FUNCTION DThetaSP(alfa, h, R, kappa, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), psi
+            real*8  DThetaSP, den1, den2   
+                den1 = 1d0/sqrt(kappa(1)**2 - alfa**2); den2 = 1d0/sqrt(kappa(2)**2 - alfa**2);
+                DThetaSP = h/R*alfa*den1 - alfa*sind(psi)*den1 - h/R*alfa*den2 - cosd(psi)
+        END FUNCTION DThetaSP
+        
+        
+        FUNCTION D2ThetaSP(alfa, h, R, kappa, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), psi
+            real*8  D2ThetaSP, den1, den2   
+                den1 = 1d0/(sqrt(kappa(1)**2 - alfa**2))**3; den2 = 1d0/(sqrt(kappa(2)**2 - alfa**2))**3;
+                D2ThetaSP = h/R*kappa(1)**2*den1 - kappa(1)**2*sind(psi)*den1 - h/R*kappa(1)**2*den2 
+        END FUNCTION D2ThetaSP
     
     
 END MODULE functions

@@ -31,6 +31,7 @@
 		<File RelativePath=".\Csimpn5.f90"/>
 		<File RelativePath=".\Dinn5.f90"/>
 		<File RelativePath=".\functions.f90"/>
+		<File RelativePath=".\Halfc.f90"/>
 		<File RelativePath=".\isotSc.f90"/>
 		<File RelativePath=".\Star5m.f90"/>
 		<File RelativePath=".\test.f90"/></Filter>

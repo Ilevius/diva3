@@ -26,7 +26,7 @@
 %TCIDATA{Codepage=1251}
 %TCIDATA{CSTFile=LaTeX Book.cst}
 %TCIDATA{Created=Thursday, December 15, 2016 08:42:37}
-%TCIDATA{LastRevised=Wednesday, November 23, 2022 11:30:29}
+%TCIDATA{LastRevised=Monday, November 28, 2022 13:14:48}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
@@ -88,7 +88,7 @@ V_{0}=V_{1}e^{\sigma_{1}z}+V_{2}e^{\sigma_{2}z}%
 \right)  e^{-\sigma_{1}(z+h)}+t_{2}\left(
 \begin{array}
 [c]{l}%
--\sigma_{2}\\
+\sigma_{2}\\
 -i\alpha
 \end{array}
 \right)  e^{-\sigma_{2}(z+h)}%
@@ -139,11 +139,11 @@ A}e^{-\sigma_{2}h}%
 \right)  e^{-\sigma_{1}(z+h)}+
 \]%
 \[
-+\left(  \frac{\Delta_{i,1}}{\det A}e^{-\sigma_{1}h}+\frac{\Delta_{i,2}}{\det
++\left(  \frac{\Delta_{2,1}}{\det A}e^{-\sigma_{1}h}+\frac{\Delta_{2,2}}{\det
 A}e^{-\sigma_{2}h}\right)  \left(
 \begin{array}
 [c]{l}%
--\sigma_{2}\\
+\sigma_{2}\\
 -i\alpha
 \end{array}
 \right)  e^{-\sigma_{2}(z+h)}=
@@ -167,16 +167,156 @@ A}e^{-\sigma_{2}h}\right)  \left(
 +\left(
 \begin{array}
 [c]{l}%
--\sigma_{2}\\
+\sigma_{2}\\
 -i\alpha
 \end{array}
 \right)  \frac{\Delta_{2,1}}{\det A}e^{-\sigma_{2}(z+h)-\sigma_{1}h}+\left(
 \begin{array}
 [c]{l}%
--\sigma_{2}\\
+\sigma_{2}\\
 -i\alpha
 \end{array}
 \right)  \frac{\Delta_{2,2}}{\det A}e^{-\sigma_{2}(z+2h)}%
 \]
+
+
+Введем
+замену
+переменной
+\[
+\left\{
+\begin{array}
+[c]{l}%
+x=R\cos\psi;\\
+z+2h=R\sin\psi.
+\end{array}
+\right.
+\]
+тогда при $\alpha
+\in(-\varkappa_{1};\varkappa_{1})$ $\sigma_{n}=-i\sqrt{\varkappa_{n}%
+^{2}-\alpha^{2}}$
+
+\begin{center}
+{\LARGE Построим
+ассимптотику
+}$u_{ps}$
+\[
+-\sigma_{2}(z+h)-\sigma_{1}h-i\alpha x=i\sqrt{\varkappa_{2}^{2}-\alpha^{2}%
+}R\sin\psi+i\sqrt{\varkappa_{1}^{2}-\alpha^{2}}h-i\alpha R\cos\psi=
+\]%
+\[
+=iR(\sqrt{\varkappa_{2}^{2}-\alpha^{2}}\sin\psi+\frac{\sqrt{\varkappa_{1}%
+^{2}-\alpha^{2}}h}{R}-\frac{\sqrt{\varkappa_{2}^{2}-\alpha^{2}}h}{R}%
+-\alpha\cos\psi)=
+\]%
+\[
+iR\theta_{ps}(\alpha,h,R,\varkappa_{1},\varkappa_{2},\psi)
+\]%
+\[
+\theta_{ps}(\alpha)=\sqrt{\varkappa_{2}^{2}-\alpha^{2}}\sin\psi+\frac
+{\sqrt{\varkappa_{1}^{2}-\alpha^{2}}h}{R}-\frac{\sqrt{\varkappa_{2}^{2}%
+-\alpha^{2}}h}{R}-\alpha\cos\psi
+\]%
+\[
+\frac{\partial}{\partial\alpha}\left(  \sqrt{\varkappa_{2}^{2}-\alpha^{2}}%
+\sin\psi+\frac{\sqrt{\varkappa_{1}^{2}-\alpha^{2}}h}{R}-\frac{\sqrt
+{\varkappa_{2}^{2}-\alpha^{2}}h}{R}-\alpha\cos\psi\right)  =
+\]
+:%
+\[
+=-\frac{1}{R\sqrt{\varkappa_{1}^{2}-\alpha^{2}}\sqrt{\varkappa_{2}^{2}%
+-\alpha^{2}}}\left(  h\alpha\sqrt{\varkappa_{2}^{2}-\alpha^{2}}-h\alpha
+\sqrt{\varkappa_{1}^{2}-\alpha^{2}}+R\alpha\left(  \sin\psi\right)
+\sqrt{\varkappa_{1}^{2}-\alpha^{2}}+R\left(  \cos\psi\right)  \sqrt
+{\varkappa_{1}^{2}-\alpha^{2}}\sqrt{\varkappa_{2}^{2}-\alpha^{2}}\right)  =
+\]%
+\[
+\frac{h}{R}\frac{\alpha}{\sqrt{\varkappa_{2}^{2}-\alpha^{2}}}-\alpha\frac
+{\sin\psi}{\sqrt{\varkappa_{2}^{2}-\alpha^{2}}}-\frac{h}{R}\frac{\alpha}%
+{\sqrt{\varkappa_{1}^{2}-\alpha^{2}}}-\allowbreak\cos\psi=\theta
+_{ps}^{^{\prime}}(\alpha)
+\]%
+\[
+\frac{\partial}{\partial\alpha}\left(  \frac{h}{R}\frac{\alpha}{\sqrt
+{\varkappa_{2}^{2}-\alpha^{2}}}-\alpha\frac{\sin\psi}{\sqrt{\varkappa_{2}%
+^{2}-\alpha^{2}}}-\frac{h}{R}\frac{\alpha}{\sqrt{\varkappa_{1}^{2}-\alpha^{2}%
+}}-\allowbreak\cos\psi\right)  =
+\]%
+\[
+\frac{1}{R}h\frac{\varkappa_{2}^{2}}{\left(  \varkappa_{2}^{2}-\alpha
+^{2}\right)  ^{\frac{3}{2}}}-\frac{1}{R}h\frac{\varkappa_{1}^{2}}{\left(
+\varkappa_{1}^{2}-\alpha^{2}\right)  ^{\frac{3}{2}}}-\varkappa_{2}^{2}%
+\frac{\sin\psi}{\left(  \varkappa_{2}^{2}-\alpha^{2}\right)  ^{\frac{3}{2}}%
+}=\theta_{ps}^{^{^{\prime\prime}}}(\alpha)
+\]%
+\[
+\sqrt{\frac{1}{2\pi R\left\vert \theta^{^{\prime\prime}}\left(  \alpha
+_{0}\right)  \right\vert }}f(\alpha_{0})\exp\left(  iR\theta\left(  \alpha
+_{0}\right)  +\frac{i\pi}{4}sgn\theta^{^{\prime\prime}}\left(  \alpha
+_{0}\right)  \right)  .
+\]
+
+
+\bigskip
+
+{\LARGE Построим
+ассимптотику
+}$u_{sp}$
+\[
+-\sigma_{1}(z+h)-\sigma_{2}h-i\alpha x=-\sigma_{1}(z+2h)+\sigma_{1}%
+h-\sigma_{2}h-i\alpha x=
+\]%
+\[
+=i\sqrt{\varkappa_{1}^{2}-\alpha^{2}}R\sin\psi-i\sqrt{\varkappa_{1}^{2}%
+-\alpha^{2}}h+i\sqrt{\varkappa_{2}^{2}-\alpha^{2}}h-i\alpha R\cos\psi=
+\]%
+\[
+=iR(\sqrt{\varkappa_{1}^{2}-\alpha^{2}}\sin\psi-\sqrt{\varkappa_{1}^{2}%
+-\alpha^{2}}\frac{h}{R}+\sqrt{\varkappa_{2}^{2}-\alpha^{2}}\frac{h}{R}%
+-\alpha\cos\psi)=
+\]%
+\[
+iR\theta_{ps}(\alpha,h,R,\varkappa_{1},\varkappa_{2},\psi)
+\]%
+\[
+\theta_{sp}(\alpha)=\sqrt{\varkappa_{1}^{2}-\alpha^{2}}\sin\psi-\sqrt
+{\varkappa_{1}^{2}-\alpha^{2}}\frac{h}{R}+\sqrt{\varkappa_{2}^{2}-\alpha^{2}%
+}\frac{h}{R}-\alpha\cos\psi
+\]
+
+
+\bigskip%
+
+\[
+\frac{\partial}{\partial\alpha}\left(  \sqrt{\varkappa_{1}^{2}-\alpha^{2}}%
+\sin\psi-\sqrt{\varkappa_{1}^{2}-\alpha^{2}}\frac{h}{R}+\sqrt{\varkappa
+_{2}^{2}-\alpha^{2}}\frac{h}{R}-\alpha\cos\psi\right)  =
+\]
+\[
+=\frac{h}{R}\frac{\alpha}{\sqrt{\varkappa_{1}^{2}-\alpha^{2}}}-\alpha
+\frac{\sin\psi}{\sqrt{\varkappa_{1}^{2}-\alpha^{2}}}-\cos\psi-\frac{h}%
+{R}\allowbreak\frac{\alpha}{\sqrt{\varkappa_{2}^{2}-\alpha^{2}}}=\theta
+_{sp}^{^{\prime}}(\alpha)
+\]
+
+
+\bigskip%
+
+\[
+\frac{\partial}{\partial\alpha}\left(  \frac{h}{R}\frac{\alpha}{\sqrt
+{\varkappa_{1}^{2}-\alpha^{2}}}-\alpha\frac{\sin\psi}{\sqrt{\varkappa_{1}%
+^{2}-\alpha^{2}}}-\cos\psi-\frac{h}{R}\allowbreak\frac{\alpha}{\sqrt
+{\varkappa_{2}^{2}-\alpha^{2}}}\right)  =
+\]
+\[
+=\frac{h}{R}\frac{\varkappa_{1}^{2}}{\left(  \varkappa_{1}^{2}-\alpha
+^{2}\right)  ^{\frac{3}{2}}}-\varkappa_{1}^{2}\frac{\sin\psi}{\left(
+\varkappa_{1}^{2}-\alpha^{2}\right)  ^{\frac{3}{2}}}-\frac{h}{R}%
+\frac{\varkappa_{2}^{2}}{\left(  \varkappa_{2}^{2}-\alpha^{2}\right)
+^{\frac{3}{2}}}=\theta_{ps}^{^{^{\prime\prime}}}(\alpha)
+\]
+
+\end{center}
+
 
 \end{document}

@@ -19,7 +19,7 @@ PROGRAM isotSc
     integer pointsNumber, i
     real*8 cp(2), cs(2), rho(2), h
     namelist /media/ cp, cs, rho, h
-    real*8 singleF, singlePsi, psiMin, psiNumber, psiStep, singleR, Rmin, Rstep, Rmax
+    real*8 singleF, singlePsi, psiMin, psiNumber, psiStep, singleR, Rmin, Rstep, Rmax, currentPsi
     character(len=5) :: mode
     namelist /study/mode, singleF, singlePsi, psiMin, psiNumber, psiStep, singleR, Rmin, Rstep, Rmax
     
@@ -72,14 +72,14 @@ PROGRAM isotSc
             allocate(x(pointsNumber), z(pointsNumber));
             do i = 1, pointsNumber
                 x(i) = singleR*cosd((i - 1)*psiStep + psiMin) 
-                z(i) = singleR*sind((i - 1)*psiStep + psiMin) - h!2d0*h
+                z(i) = singleR*sind((i - 1)*psiStep + psiMin) - 2d0*h
             enddo    
         endif
             
 
                  
-        call dinn5(ups_integrand_vert,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_vert)
-        call dinn5(ups_integrand_horis,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_horis)
+        call dinn5(usp_integrand_vert,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_vert)
+        call dinn5(usp_integrand_horis,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_horis)
         
         call usp_stPhase(pointsNumber, psis, Rs, kappa, kappaCap, lambda(1), lambda(2), mu(1), mu(2), stPhase)
         
@@ -151,8 +151,8 @@ PROGRAM isotSc
         integer n, i
         complex*16 alfa, s(n), sigma(2), no_x_part_minus, no_x_part_plus 
             sigma = makeSigma(kappa, alfa)
-            no_x_part_plus = CramDelta(2, 1, kappa, kappaCap, lambda, mu, alfa)*(-ci*alfa)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa) 
-            no_x_part_minus = CramDelta(2, 1, kappa, kappaCap, lambda, mu, -alfa)*(ci*alfa)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, -alfa)
+            no_x_part_plus = CramDelta(2, 1, kappa, kappaCap, lambda, mu, alfa)*(sigma(2))/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa) 
+            no_x_part_minus = CramDelta(2, 1, kappa, kappaCap, lambda, mu, -alfa)*(sigma(2))/CramDelta(0, 0, kappa, kappaCap, lambda, mu, -alfa)
             do i = 1, n
                 s(i) = no_x_part_plus*exp(-sigma(2)*(z(i)+h)-sigma(1)*h-ci*alfa*x(i))   
                 s(i) = s(i) + no_x_part_minus*exp(-sigma(2)*(z(i)+h)-sigma(1)*h+ci*alfa*x(i))
@@ -164,14 +164,18 @@ PROGRAM isotSc
         SUBROUTINE ups_integrand_vert(alfa, s, n)
         implicit none;
         integer n, i
-        complex*16 alfa, s(n), sigma(2), no_x_part_minus, no_x_part_plus  
+        complex*16 alfa, s(n), sigma(2), no_x_part_minus, no_x_part_plus
             sigma = makeSigma(kappa, alfa)
-            no_x_part_plus = CramDelta(2, 1, kappa, kappaCap, lambda, mu, alfa)*(-sigma(1))/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa)
-            no_x_part_minus = CramDelta(2, 1, kappa, kappaCap, lambda, mu, -alfa)*(-sigma(1))/CramDelta(0, 0, kappa, kappaCap, lambda, mu, -alfa)
+            
+            
+            no_x_part_plus = CramDelta(2, 1, kappa, kappaCap, lambda, mu, alfa)*(-ci*alfa)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa)
+            no_x_part_minus = CramDelta(2, 1, kappa, kappaCap, lambda, mu, -alfa)*(ci*alfa)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, -alfa)
+            
+            
             do i = 1, n
                 s(i) = no_x_part_plus*exp(-sigma(2)*(z(i)+h)-sigma(1)*h-ci*alfa*x(i))   
                 s(i) = s(i) + no_x_part_minus*exp(-sigma(2)*(z(i)+h)-sigma(1)*h+ci*alfa*x(i))
-                s(i) = s(i)/(2d0*pi)
+               s(i) = s(i)/(2d0*pi)
             enddo    
         END SUBROUTINE ups_integrand_vert
     
@@ -180,17 +184,46 @@ PROGRAM isotSc
         implicit none
         integer pointsNumber
         real*8 psis(pointsNumber), Rs(pointsNumber), kappa(2), kappaCap(2), lambda, lambdaCap, mu, muCap
+        real*8 stPoints(10), theta, D2theta, alfa0, test
         complex*16 theResult(2, pointsNumber)  
-        integer i
-        complex*16 alfa0, sigma(2), commonRes
+        integer i, stPointsNumber
+        complex*16 alfa0c, sigma(2), commonRes
             do i = 1, pointsNumber
-                alfa0 = -cosd(psis(i))*kappa(1)
-                sigma = makeSigma(kappa, alfa0)
-                commonRes = sqrt(kappa(1)*sind(psis(i))**2/(2d0*pi*Rs(i)))*CramDelta(1, 1, kappa, kappaCap, lambda, mu, alfa0)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa0)*exp(ci*Rs(i)*kappa(1) - ci*pi/4)
-                theResult(1,i) = commonRes*(-ci*alfa0)
-                theResult(2,i) = commonRes*(-sigma(1))    
+                currentPsi = psis(i)
+                
+                ! Находим стац точки, сохраняем первую в дей и компл форме
+                call Halfc(DThetaPSHalfC, -100d0, 100d0, 2d-3, 1d-6, 10, stPoints, stPointsNumber)
+                alfa0 = stPoints(1)
+                alfa0c = cmplx(stPoints(1))
+                sigma = makeSigma(kappa, alfa0c)
+                
+                if (stPointsNumber > 1 ) then
+                    print*, 'oops'
+                    pause
+                endif  
+                
+                if (abs(alfa0)>kappa(1)) then
+                    print*, 'oops'
+                    pause
+                endif
+                
+                ! находим значение фазовой функции и ее производных в стац точке
+                theta = ThetaPS(alfa0, h, Rs(i), kappa, psis(i))
+                D2theta = D2ThetaPS(alfa0, h, Rs(i), kappa, psis(i))
+                
+                ! obtaining asymptotics 
+                commonRes = sqrt(1d0/(2d0*pi*Rs(i)))*sqrt(1d0/abs(D2theta))*CramDelta(2, 1, kappa, kappaCap, lambda, mu, alfa0c)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa0c)*exp( ci*Rs(i)*theta + ci*pi/4d0*sign(1d0, D2Theta) )
+                theResult(1,i) = commonRes*(sigma(2))
+                theResult(2,i) = commonRes*(-ci*alfa0)    
             enddo      
         END SUBROUTINE ups_stPhase  
+        
+        FUNCTION DThetaPSHalfC(alfa)
+            implicit none
+            real*8 alfa
+            complex*16 DThetaPSHalfC
+                DThetaPSHalfC = cmplx(DThetaPS(alfa, h, singleR, kappa, currentPsi))
+        END FUNCTION DThetaPSHalfC
         
         
         
@@ -202,8 +235,8 @@ PROGRAM isotSc
         integer n, i
         complex*16 alfa, s(n), sigma(2), no_x_part_minus, no_x_part_plus 
             sigma = makeSigma(kappa, alfa)
-            no_x_part_plus = CramDelta(1, 2, kappa, kappaCap, lambda, mu, alfa)*(-sigma(2))/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa) 
-            no_x_part_minus = CramDelta(1, 2, kappa, kappaCap, lambda, mu, -alfa)*(-sigma(2))/CramDelta(0, 0, kappa, kappaCap, lambda, mu, -alfa)
+            no_x_part_plus = CramDelta(1, 2, kappa, kappaCap, lambda, mu, alfa)*(-ci*alfa)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa) 
+            no_x_part_minus = CramDelta(1, 2, kappa, kappaCap, lambda, mu, -alfa)*(ci*alfa)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, -alfa)
             do i = 1, n
             s(i) = no_x_part_plus*exp(-sigma(1)*(z(i)+h)-sigma(2)*h-ci*alfa*x(i))   
             s(i) = s(i) + no_x_part_minus*exp(-sigma(1)*(z(i)+h)-sigma(2)*h+ci*alfa*x(i))
@@ -217,8 +250,8 @@ PROGRAM isotSc
         integer n, i
         complex*16 alfa, s(n), sigma(2), no_x_part_minus, no_x_part_plus  
             sigma = makeSigma(kappa, alfa)
-            no_x_part_plus = CramDelta(1, 2, kappa, kappaCap, lambda, mu, alfa)*(-ci*alfa)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa)
-            no_x_part_minus = CramDelta(1, 2, kappa, kappaCap, lambda, mu, -alfa)*(ci*alfa)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, -alfa)
+            no_x_part_plus = CramDelta(1, 2, kappa, kappaCap, lambda, mu, alfa)*(-sigma(1))/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa)
+            no_x_part_minus = CramDelta(1, 2, kappa, kappaCap, lambda, mu, -alfa)*(-sigma(1))/CramDelta(0, 0, kappa, kappaCap, lambda, mu, -alfa)
             do i = 1, n
             s(i) = no_x_part_plus*exp(-sigma(1)*(z(i)+h)-sigma(2)*h-ci*alfa*x(i))   
             s(i) = s(i) + no_x_part_minus*exp(-sigma(1)*(z(i)+h)-sigma(2)*h+ci*alfa*x(i))
@@ -231,17 +264,46 @@ PROGRAM isotSc
         implicit none
         integer pointsNumber
         real*8 psis(pointsNumber), Rs(pointsNumber), kappa(2), kappaCap(2), lambda, lambdaCap, mu, muCap
+        real*8 stPoints(10), theta, D2theta, alfa0, test
         complex*16 theResult(2, pointsNumber)  
-        integer i
-        complex*16 alfa0, sigma(2), commonRes
+        integer i, stPointsNumber
+        complex*16 alfa0c, sigma(2), commonRes
             do i = 1, pointsNumber
-                alfa0 = -cosd(psis(i))*kappa(2)
-                sigma = makeSigma(kappa, alfa0)
-                commonRes = sqrt(kappa(2)*sind(psis(i))**2/(2d0*pi*Rs(i)))*CramDelta(2, 2, kappa, kappaCap, lambda, mu, alfa0)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa0)*exp(ci*Rs(i)*kappa(2) - ci*pi/4)
-                theResult(1,i) = commonRes*(-sigma(2))
-                theResult(2,i) = commonRes*(-ci*alfa0)    
+                currentPsi = psis(i)
+                
+                ! Находим стац точки, сохраняем первую в дей и компл форме
+                call Halfc(DThetaSPHalfC, -100d0, 100d0, 2d-3, 1d-6, 10, stPoints, stPointsNumber)
+                alfa0 = stPoints(1)
+                alfa0c = cmplx(stPoints(1))
+                sigma = makeSigma(kappa, alfa0c)
+                
+                if (stPointsNumber > 1 ) then
+                    print*, 'oops'
+                    pause
+                endif  
+                
+                if (abs(alfa0)>kappa(1)) then
+                    print*, 'oops'
+                    pause
+                endif
+                
+                ! находим значение фазовой функции и ее производных в стац точке
+                theta = ThetaSP(alfa0, h, Rs(i), kappa, psis(i))
+                D2theta = D2ThetaSP(alfa0, h, Rs(i), kappa, psis(i))
+                
+                ! obtaining asymptotics 
+                commonRes = sqrt(1d0/(2d0*pi*Rs(i)))*sqrt(1d0/abs(D2theta))*CramDelta(1, 2, kappa, kappaCap, lambda, mu, alfa0c)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa0c)*exp( ci*Rs(i)*theta + ci*pi/4d0*sign(1d0, D2Theta) )
+                theResult(1,i) = commonRes*(-ci*alfa0)
+                theResult(2,i) = commonRes*(-sigma(1))    
             enddo      
-        END SUBROUTINE usp_stPhase 
+        END SUBROUTINE usp_stPhase  
+        
+        FUNCTION DThetaSPHalfC(alfa)
+            implicit none
+            real*8 alfa
+            complex*16 DThetaSPHalfC
+                DThetaSPHalfC = cmplx(DThetaSP(alfa, h, singleR, kappa, currentPsi))
+        END FUNCTION DThetaSPHalfC
         
         
         
@@ -253,8 +315,8 @@ PROGRAM isotSc
         integer n, i
         complex*16 alfa, s(n), sigma(2), no_x_part_minus, no_x_part_plus 
             sigma = makeSigma(kappa, alfa)
-            no_x_part_plus = CramDelta(2, 2, kappa, kappaCap, lambda, mu, alfa)*(-sigma(2))/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa) 
-            no_x_part_minus = CramDelta(2, 2, kappa, kappaCap, lambda, mu, -alfa)*(-sigma(2))/CramDelta(0, 0, kappa, kappaCap, lambda, mu, -alfa)
+            no_x_part_plus = CramDelta(2, 2, kappa, kappaCap, lambda, mu, alfa)*(sigma(2))/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa) 
+            no_x_part_minus = CramDelta(2, 2, kappa, kappaCap, lambda, mu, -alfa)*(sigma(2))/CramDelta(0, 0, kappa, kappaCap, lambda, mu, -alfa)
             do i = 1, n
             s(i) = no_x_part_plus*exp(-sigma(2)*(z(i)+2d0*h)-ci*alfa*x(i))   
             s(i) = s(i) + no_x_part_minus*exp(-sigma(2)*(z(i)+2d0*h)+ci*alfa*x(i))
@@ -289,7 +351,7 @@ PROGRAM isotSc
                 alfa0 = -cosd(psis(i))*kappa(2)
                 sigma = makeSigma(kappa, alfa0)
                 commonRes = sqrt(kappa(2)*sind(psis(i))**2/(2d0*pi*Rs(i)))*CramDelta(2, 2, kappa, kappaCap, lambda, mu, alfa0)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa0)*exp(ci*Rs(i)*kappa(2) - ci*pi/4)
-                theResult(1,i) = commonRes*(-sigma(2))
+                theResult(1,i) = commonRes*(sigma(2))
                 theResult(2,i) = commonRes*(-ci*alfa0)    
             enddo      
         END SUBROUTINE uss_stPhase 
