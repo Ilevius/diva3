@@ -9,6 +9,7 @@ h = 1d0
 /
 &study
 mode = 'polar',
+field = 'upp'
 singleF = 31.07d0,
 singlePsi = 60,
 psiMin = 5d0,

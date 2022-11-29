@@ -21,7 +21,8 @@ PROGRAM isotSc
     namelist /media/ cp, cs, rho, h
     real*8 singleF, singlePsi, psiMin, psiNumber, psiStep, singleR, Rmin, Rstep, Rmax, currentPsi
     character(len=5) :: mode
-    namelist /study/mode, singleF, singlePsi, psiMin, psiNumber, psiStep, singleR, Rmin, Rstep, Rmax
+    character(len=3) :: field
+    namelist /study/field, mode, singleF, singlePsi, psiMin, psiNumber, psiStep, singleR, Rmin, Rstep, Rmax
     
     real*8 t1, t2, t3, t4, tm, tp, eps, step, IntLimit
     namelist /dinn5Settings/ t1, t2, t3, t4, tm, tp, eps, step, IntLimit
@@ -78,10 +79,10 @@ PROGRAM isotSc
             
 
                  
-        call dinn5(usp_integrand_vert,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_vert)
-        call dinn5(usp_integrand_horis,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_horis)
+        call dinn5(ups_integrand_vert,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_vert)
+        call dinn5(ups_integrand_horis,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_horis)
         
-        call usp_stPhase(pointsNumber, psis, Rs, kappa, kappaCap, lambda(1), lambda(2), mu(1), mu(2), stPhase)
+        call ups_stPhase(pointsNumber, psis, Rs, kappa, kappaCap, lambda(1), lambda(2), mu(1), mu(2), stPhase)
         
         open(1, file='integral.txt', FORM='FORMATTED')
         write(1,*) "%psi, re(u), im(u), abs(u), re(w), im(w), abs(w)"
@@ -95,6 +96,13 @@ PROGRAM isotSc
         close(1); close(2);
         
     CONTAINS
+        SUBROUTINE makeStudy
+        
+        
+        
+        END SUBROUTINE makeStudy
+    
+    
     !                                                   *   *   *   
     !                                                      u_pp
         SUBROUTINE upp_integrand_horis(alfa, s, n)
@@ -184,15 +192,15 @@ PROGRAM isotSc
         implicit none
         integer pointsNumber
         real*8 psis(pointsNumber), Rs(pointsNumber), kappa(2), kappaCap(2), lambda, lambdaCap, mu, muCap
-        real*8 stPoints(10), theta, D2theta, alfa0, test
-        complex*16 theResult(2, pointsNumber)  
+        real*8 stPoints(10), theta, D2theta, alfa0
+        complex*16 theResult(2, pointsNumber), test  
         integer i, stPointsNumber
         complex*16 alfa0c, sigma(2), commonRes
             do i = 1, pointsNumber
                 currentPsi = psis(i)
                 
                 ! Находим стац точки, сохраняем первую в дей и компл форме
-                call Halfc(DThetaPSHalfC, -100d0, 100d0, 2d-3, 1d-6, 10, stPoints, stPointsNumber)
+                call Halfc(DThetaPSHalfC, -kappa(1), kappa(1), 2d-3, 1d-8, 10, stPoints, stPointsNumber)
                 alfa0 = stPoints(1)
                 alfa0c = cmplx(stPoints(1))
                 sigma = makeSigma(kappa, alfa0c)
@@ -212,6 +220,7 @@ PROGRAM isotSc
                 D2theta = D2ThetaPS(alfa0, h, Rs(i), kappa, psis(i))
                 
                 ! obtaining asymptotics 
+                test = CramDelta(2, 1, kappa, kappaCap, lambda, mu, alfa0c)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa0c)
                 commonRes = sqrt(1d0/(2d0*pi*Rs(i)))*sqrt(1d0/abs(D2theta))*CramDelta(2, 1, kappa, kappaCap, lambda, mu, alfa0c)/CramDelta(0, 0, kappa, kappaCap, lambda, mu, alfa0c)*exp( ci*Rs(i)*theta + ci*pi/4d0*sign(1d0, D2Theta) )
                 theResult(1,i) = commonRes*(sigma(2))
                 theResult(2,i) = commonRes*(-ci*alfa0)    

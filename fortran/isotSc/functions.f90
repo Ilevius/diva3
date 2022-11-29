@@ -169,7 +169,7 @@ MODULE functions
         FUNCTION D2ThetaPS(alfa, h, R, kappa, psi)
             implicit none
             real*8 alfa, h, R, kappa(2), psi
-            real*8  D2ThetaPS, den1, den2   
+            real*8  D2ThetaPS, den1, den2
                 den1 = 1d0/(sqrt(kappa(1)**2 - alfa**2))**3; den2 = 1d0/(sqrt(kappa(2)**2 - alfa**2))**3;
                 D2ThetaPS = h/R*kappa(2)**2*den2 - h/R*kappa(1)**2*den1 - kappa(2)**2*sind(psi)*den2
         END FUNCTION D2ThetaPS
@@ -198,7 +198,7 @@ MODULE functions
             real*8 alfa, h, R, kappa(2), psi
             real*8  D2ThetaSP, den1, den2   
                 den1 = 1d0/(sqrt(kappa(1)**2 - alfa**2))**3; den2 = 1d0/(sqrt(kappa(2)**2 - alfa**2))**3;
-                D2ThetaSP = h/R*kappa(1)**2*den1 - kappa(1)**2*sind(psi)*den1 - h/R*kappa(1)**2*den2 
+                D2ThetaSP = h/R*kappa(1)**2*den1 - kappa(1)**2*sind(psi)*den1 - h/R*kappa(2)**2*den2 
         END FUNCTION D2ThetaSP
     
     
