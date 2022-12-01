@@ -26,7 +26,7 @@
 %TCIDATA{Codepage=1251}
 %TCIDATA{CSTFile=LaTeX Book.cst}
 %TCIDATA{Created=Thursday, December 15, 2016 08:42:37}
-%TCIDATA{LastRevised=Monday, November 28, 2022 12:15:22}
+%TCIDATA{LastRevised=Monday, November 28, 2022 13:14:48}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
@@ -88,7 +88,7 @@ V_{0}=V_{1}e^{\sigma_{1}z}+V_{2}e^{\sigma_{2}z}%
 \right)  e^{-\sigma_{1}(z+h)}+t_{2}\left(
 \begin{array}
 [c]{l}%
--\sigma_{2}\\
+\sigma_{2}\\
 -i\alpha
 \end{array}
 \right)  e^{-\sigma_{2}(z+h)}%
@@ -139,11 +139,11 @@ A}e^{-\sigma_{2}h}%
 \right)  e^{-\sigma_{1}(z+h)}+
 \]%
 \[
-+\left(  \frac{\Delta_{i,1}}{\det A}e^{-\sigma_{1}h}+\frac{\Delta_{i,2}}{\det
++\left(  \frac{\Delta_{2,1}}{\det A}e^{-\sigma_{1}h}+\frac{\Delta_{2,2}}{\det
 A}e^{-\sigma_{2}h}\right)  \left(
 \begin{array}
 [c]{l}%
--\sigma_{2}\\
+\sigma_{2}\\
 -i\alpha
 \end{array}
 \right)  e^{-\sigma_{2}(z+h)}=
@@ -167,13 +167,13 @@ A}e^{-\sigma_{2}h}\right)  \left(
 +\left(
 \begin{array}
 [c]{l}%
--\sigma_{2}\\
+\sigma_{2}\\
 -i\alpha
 \end{array}
 \right)  \frac{\Delta_{2,1}}{\det A}e^{-\sigma_{2}(z+h)-\sigma_{1}h}+\left(
 \begin{array}
 [c]{l}%
--\sigma_{2}\\
+\sigma_{2}\\
 -i\alpha
 \end{array}
 \right)  \frac{\Delta_{2,2}}{\det A}e^{-\sigma_{2}(z+2h)}%

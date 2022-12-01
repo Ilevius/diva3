@@ -8,9 +8,9 @@ rho(2) = 0.57d0,
 h = 1d0
 /
 &study
-mode = 'polar',
-field = 'upp'
-singleF = 31.07d0,
+mode = 'flat_',
+field = 'uss'
+singleW = 31.07d0,
 singlePsi = 60,
 psiMin = 5d0,
 psiNumber = 340,
@@ -18,7 +18,11 @@ psiStep = 0.5d0,
 singleR = 14d0,
 Rmin = 10d0,
 Rstep = 0.2d0,
-Rmax = 70d0
+Rmax = 70d0,
+zSingle = 0d0,
+xMin = 1d0,
+xMax = 40d0,
+xStep = 0.1d0
 /
 &dinn5Settings
 t1 = 0d0, 

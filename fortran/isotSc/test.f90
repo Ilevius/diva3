@@ -1,14 +1,14 @@
 MODULE test
     CONTAINS
     
-        SUBROUTINE source_field(mode, kappa, mu)
+        SUBROUTINE source_field(testName, kappa, mu)
         use functions
         IMPLICIT NONE
-        character (len=*) :: mode
+        character (len=*) :: testName
         real*8 alfa, kappa(2), mu
         complex*16 alfa_c, sigma(2), object1, object2
             ! Here we test if mu(U'-i*alfa*W) equals Q1
-            if (mode == 'first boundary') then
+            if (testName == 'first boundary') then
                 open(1, file='test.txt', FORM='FORMATTED')
                 write(1, *) "%Here we test if mu(U'-i*alfa*W) equals Q1 at z = 0 "
                 write(1, *) "% Objects 1, 2 should coinside "
@@ -23,7 +23,7 @@ MODULE test
                 close(1)
             ! Here we test if -lambda*i*alfa*U + (lambda+2*mu)*W' equals Q2   
                                                                                     ! T O   B E   D O N E  !!!!!!!!!!!!
-            else if (mode == 'second boundary') then
+            else if (testName == 'second boundary') then
 
                 
             endif    
@@ -31,14 +31,14 @@ MODULE test
         END SUBROUTINE source_field
         
         
-        SUBROUTINE scattered_field(mode, kappa, kappaCap, mu, lambda, h)
+        SUBROUTINE scattered_field(testName, kappa, kappaCap, mu, lambda, h)
         use functions
         IMPLICIT NONE
-        character (len=*) :: mode
+        character (len=*) :: testName
         real*8 alfa, kappa(2), kappaCap(2), mu(2), lambda(2), h
         complex*16 alfa_c, sigma(2), sigmaCap(2), object1, object2, t(4)
             ! Here we test if U0+Uminus equals Uplus at z = -h
-            if (mode == 'U') then
+            if (testName == 'U') then
                 open(1, file='test.txt', FORM='FORMATTED')
                 write(1, *) "%Here we test if U0+Uminus equals Uplus at z = -h "
                 write(1, *) "% Objects 1, 2 should coinside "
@@ -70,11 +70,23 @@ MODULE test
                 close(1)
             ! Here we test if -lambda*i*alfa*U + (lambda+2*mu)*W' equals Q2   
                                                                                     ! T O   B E   D O N E  !!!!!!!!!!!!
-            else if (mode == 'W') then
+            else if (testName == 'W') then
 
                 
             endif    
         
         END SUBROUTINE scattered_field
+        
+        
+        SUBROUTINE xzPointsTest(x, z, psi, R, h, n)
+            integer n
+            real*8 x(n), z(n), psi(n), R(n), h
+            open(1, file='points.txt', FORM='FORMATTED')
+            write(1,*) '% x, z, xRe, zRe, psi, R, h'
+            do i = 1, n          
+                write(1,'(7E15.6E3)') x(i), z(i), R(i)*cosd(psi(i)), R(i)*sind(psi(i)) - 2d0*h, psi(i), R(i), h
+            enddo
+            close(1)
+        END SUBROUTINE xzPointsTest
     
 END MODULE test

@@ -1,16 +1,14 @@
 clc;
 close all;
 data = load('integral.txt');
-psi = data(:,1);
-psi = psi/180*pi;
-int = data(:,7);
+x = data(:,3);
+int = data(:,5);
 intMod = sqrt(data(:,7).^2 + data(:,10).^2);
 
 data = load('stPhase.txt');
-stPhase = data(:,7);
+stPhase = data(:,5);
 stPhaseMod = sqrt(data(:,7).^2 + data(:,10).^2);
 
-polarplot(psi, intMod, psi, stPhaseMod,'--', 'lineWidth', 3);
-thetalim([0 180]);
+plot(x, intMod, x, stPhaseMod,'--', 'lineWidth', 3);
 legend('integral','asymptotics');
 title('u_{pp}');
