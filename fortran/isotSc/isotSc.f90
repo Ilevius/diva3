@@ -16,8 +16,8 @@ PROGRAM isotSc
     use functions
     use test
     implicit none
-    integer pointsNumber, i
-    real*8 cp(2), cs(2), rho(2), h
+    integer pointsNumber, i 
+    real*8 cp(2), cs(2), rho(2), h, fieldCode
     namelist /media/ cp, cs, rho, h
     real*8 singleW, singlePsi, psiMin, psiNumber, psiStep, singleR, Rmin, Rstep, Rmax, zSingle, xMin, xMax, xStep
     character(len=3) :: field
@@ -62,16 +62,21 @@ PROGRAM isotSc
         
         
         open(1, file='integral.txt', FORM='FORMATTED')
+        open(2, file='stPhase.txt', FORM='FORMATTED')
         
         write(1,*) "% the field is ", field
-        write(1,*) "%psi, R, x, z, re(u), im(u), abs(u), re(w), im(w), abs(w)"
+        write(1,'(A)') "% Dinn5 settings , t1, t2, t3, t4, tm, tp, eps, step, IntLimit"
+        write(1,'((A),9E15.6E3)') "% ", t1, t2, t3, t4, tm, tp, eps, step, IntLimit
+        write(1,'(A)') "% 1)psi, 2) R, 3) x, 4) z, 5) re(u), 6) im(u), 7) abs(u), 8) re(w), 9) im(w), 10) abs(w), 11) fieldCode, 12) cp(1), 13) cp(2), 14) cs(1), 15) cs(2), 16) rho(1), 17) rho(2), 18) h, 19) w"
         
-        open(2, file='stPhase.txt', FORM='FORMATTED')
         write(2,*) "% the field is ", field
-        write(2,*) "%psi, R, x, z, re(u), im(u), abs(u), re(w), im(w), abs(w)"
+        write(2,'(A)') "% Dinn5 settings , t1, t2, t3, t4, tm, tp, eps, step, IntLimit"
+        write(2,'((A),9E15.6E3)') "% ", t1, t2, t3, t4, tm, tp, eps, step, IntLimit
+        write(2,'(A)') "%psi, R, x, z, re(u), im(u), abs(u), re(w), im(w), abs(w), fieldCode, cp(1), cp(2), cs(1), cs(2), rho(1), rho(2), h, w"
+        
         do i = 1, pointsNumber
-            write(1, '(10E15.6E3)') psis(i), Rs(i), x(i), z(i), real(integral_horis(i)), imag(integral_horis(i)), abs(integral_horis(i)), real(integral_vert(i)), imag(integral_vert(i)), abs(integral_vert(i))
-            write(2, '(10E15.6E3)') psis(i), Rs(i), x(i), z(i), real(stPhase(1,i)),      imag(stPhase(1,i)),      abs(stPhase(1,i)),      real(stPhase(2,i)),     imag(stPhase(2,i)),     abs(stPhase(2,i))
+            write(1, '(19E15.6E3)') psis(i), Rs(i), x(i), z(i), real(integral_horis(i)), imag(integral_horis(i)), abs(integral_horis(i)), real(integral_vert(i)), imag(integral_vert(i)), abs(integral_vert(i)), fieldCode, cp(1), cp(2), cs(1), cs(2), rho(1), rho(2), h, singleW
+            write(2, '(19E15.6E3)') psis(i), Rs(i), x(i), z(i), real(stPhase(1,i)),      imag(stPhase(1,i)),      abs(stPhase(1,i)),      real(stPhase(2,i)),     imag(stPhase(2,i)),     abs(stPhase(2,i)), fieldCode, cp(1), cp(2), cs(1), cs(2), rho(1), rho(2), h, singleW
         enddo  
         close(1); 
         close(2);
@@ -113,19 +118,23 @@ PROGRAM isotSc
             endif
         
         
-            if (field == "upp") then          
+            if (field == "upp") then
+                fieldCode = 11
                 call dinn5(upp_integrand_horis,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_horis)
                 call dinn5(upp_integrand_vert,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_vert)
                 call upp_stPhase(pointsNumber, psis, Rs, kappa, kappaCap, lambda(1), lambda(2), mu(1), mu(2), stPhase)            
             else if (field == "ups") then
+                fieldCode = 12
                 call dinn5(ups_integrand_vert,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_vert)
                 call dinn5(ups_integrand_horis,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_horis)
                 call ups_stPhase(pointsNumber, psis, Rs, kappa, kappaCap, lambda(1), lambda(2), mu(1), mu(2), stPhase)
             else if (field == "usp") then 
+                fieldCode = 21
                 call dinn5(usp_integrand_vert,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_vert)
                 call dinn5(usp_integrand_horis,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_horis)
                 call usp_stPhase(pointsNumber, psis, Rs, kappa, kappaCap, lambda(1), lambda(2), mu(1), mu(2), stPhase) 
             else if (field == "uss") then
+                fieldCode = 22
                 call dinn5(uss_integrand_vert,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_vert)
                 call dinn5(uss_integrand_horis,t1,t2,t3,t4,tm,tp,eps,step,IntLimit,pointsNumber,integral_horis)
                 call uss_stPhase(pointsNumber, psis, Rs, kappa, kappaCap, lambda(1), lambda(2), mu(1), mu(2), stPhase)
