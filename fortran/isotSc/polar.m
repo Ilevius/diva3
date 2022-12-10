@@ -1,12 +1,12 @@
 clc;
 close all;
-data = load('integral.txt');
+data = load('integral_polar.txt');
 psi = data(:,1);
 psi = psi/180*pi;
 int = data(:,7);
 intMod = sqrt(data(:,7).^2 + data(:,10).^2);
 
-data = load('stPhase.txt');
+data = load('stPhase_polar.txt');
 stPhase = data(:,7);
 stPhaseMod = sqrt(data(:,7).^2 + data(:,10).^2);
 

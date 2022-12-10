@@ -8,14 +8,14 @@ rho(1) = 2d0,
 h = 1d0
 /
 &study
-mode = 'flat_',
+mode = 'polar',
 field = 'uss'
 singleW = 10d0,
 singlePsi = 60,
 psiMin = 5d0,
 psiNumber = 340,
 psiStep = 0.5d0,
-singleR = 14d0,
+singleR = 50d0,
 Rmin = 10d0,
 Rstep = 0.2d0,
 Rmax = 70d0,

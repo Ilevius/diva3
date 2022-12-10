@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.18)  6 DEC 2022 13:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.18)  10 DEC 2022 23:00
 entering extended mode
 **./report.tex
 (report.tex
@@ -797,21 +797,15 @@ LaTeX Font Warning: Font shape `T2A/cmr/m/up' undefined
 (Font)              using `T2A/cmr/m/n' instead on input line 64.
 
 Package xypdf Info: Line width: 0.57597pt on input line 64.
-
-Underfull \hbox (badness 1616) in paragraph at lines 69--81
-[]\T2A/cmr/m/up/14.4 Исследуются уста-но-вив-ши-е-ся гар-мо-ни-че-ские ко-ле-ба
--ния упру-го-го
- []
-
 (plots.tex
 Package epstopdf Info: Source file: <uppw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2.eps>
-(epstopdf)                    date: 2022-12-06 12:27:42
-(epstopdf)                    size: 202845 bytes
+(epstopdf)                    date: 2022-12-08 15:26:12
+(epstopdf)                    size: 231599 bytes
 (epstopdf)             Output file: <uppw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 12:27:57
-(epstopdf)                    size: 81430 bytes
+(epstopdf)                    date: 2022-12-08 15:27:14
+(epstopdf)                    size: 83956 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=uppw1cp(1)1cp(2)2cs(
 1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf uppw1cp(1)1cp(2)2cs(1)0,3cs(20,
 5rho(1)1rho(2)2.eps>
@@ -823,80 +817,77 @@ pdfTeX warning: pdflatex.exe (file ./uppw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
 <uppw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf, id=8, 121
-8.5525pt x 645.41125pt>
+8.5525pt x 689.57625pt>
 File: uppw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use uppw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>
 Package pdftex.def Info: uppw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-con
 verted-to.pdf  used on input line 1.
-(pdftex.def)             Requested size: 463.05476pt x 245.25882pt.
+(pdftex.def)             Requested size: 463.05476pt x 262.04169pt.
 Package epstopdf Info: Source file: <uppw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2.eps>
-(epstopdf)                    date: 2022-12-06 12:28:43
-(epstopdf)                    size: 197215 bytes
+(epstopdf)                    date: 2022-12-08 15:30:26
+(epstopdf)                    size: 223410 bytes
 (epstopdf)             Output file: <uppw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 12:28:52
-(epstopdf)                    size: 74893 bytes
+(epstopdf)                    date: 2022-12-08 15:30:52
+(epstopdf)                    size: 76848 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=uppw2cp(1)1cp(2)2cs(
 1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf uppw2cp(1)1cp(2)2cs(1)0,3cs(20,
 5rho(1)1rho(2)2.eps>
-(epstopdf)             \includegraphics on input line 3.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./uppw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
-<uppw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf, id=9, 121
-8.5525pt x 651.43375pt>
+<uppw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf, id=9, 120
+4.5pt x 689.57625pt>
 File: uppw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use uppw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>
 Package pdftex.def Info: uppw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-con
-verted-to.pdf  used on input line 3.
-(pdftex.def)             Requested size: 463.05476pt x 247.5474pt.
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 457.71477pt x 262.04169pt.
 Package epstopdf Info: Source file: <uppw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2.eps>
-(epstopdf)                    date: 2022-12-06 12:32:09
-(epstopdf)                    size: 115711 bytes
+(epstopdf)                    date: 2022-12-08 15:32:14
+(epstopdf)                    size: 138075 bytes
 (epstopdf)             Output file: <uppw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 12:32:26
-(epstopdf)                    size: 50655 bytes
+(epstopdf)                    date: 2022-12-08 15:32:44
+(epstopdf)                    size: 53265 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=uppw5cp(1)1cp(2)2cs(
 1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf uppw5cp(1)1cp(2)2cs(1)0,3cs(20,
 5rho(1)1rho(2)2.eps>
-(epstopdf)             \includegraphics on input line 5.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./uppw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
-<uppw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf, id=10, 12
-12.53pt x 651.43375pt>
+<uppw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf, id=10, 11
+98.4775pt x 689.57625pt>
 File: uppw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use uppw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>
 Package pdftex.def Info: uppw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-con
-verted-to.pdf  used on input line 5.
-(pdftex.def)             Requested size: 460.76619pt x 247.5474pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 455.42618pt x 262.04169pt.
 Package epstopdf Info: Source file: <uppw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rh
 o(2)2.eps>
-(epstopdf)                    date: 2022-12-06 12:33:25
-(epstopdf)                    size: 120692 bytes
+(epstopdf)                    date: 2022-12-08 15:33:56
+(epstopdf)                    size: 142559 bytes
 (epstopdf)             Output file: <uppw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rh
 o(2)2-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 12:33:36
-(epstopdf)                    size: 53809 bytes
+(epstopdf)                    date: 2022-12-08 15:34:23
+(epstopdf)                    size: 54318 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=uppw10cp(1)1cp(2)2cs
 (1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf uppw10cp(1)1cp(2)2cs(1)0,3cs(2
 0,5rho(1)1rho(2)2.eps>
-(epstopdf)             \includegraphics on input line 5.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -904,28 +895,25 @@ pdfTeX warning: pdflatex.exe (file ./uppw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rh
 o(2)2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at mos
 t version <1.5> allowed
 <uppw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf, id=11, 1
-212.53pt x 651.43375pt>
+198.4775pt x 689.57625pt>
 File: uppw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf Grap
 hic file (type pdf)
 <use uppw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>
 Package pdftex.def Info: uppw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-co
-nverted-to.pdf  used on input line 5.
-(pdftex.def)             Requested size: 460.76619pt x 247.5474pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+nverted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 455.42618pt x 262.04169pt.
 Package epstopdf Info: Source file: <upsw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2.eps>
-(epstopdf)                    date: 2022-12-06 12:36:54
-(epstopdf)                    size: 202114 bytes
+(epstopdf)                    date: 2022-12-08 15:40:25
+(epstopdf)                    size: 242521 bytes
 (epstopdf)             Output file: <upsw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 12:38:33
-(epstopdf)                    size: 75744 bytes
+(epstopdf)                    date: 2022-12-08 15:40:57
+(epstopdf)                    size: 74195 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=upsw1cp(1)1cp(2)2cs(
 1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf upsw1cp(1)1cp(2)2cs(1)0,3cs(20,
 5rho(1)1rho(2)2.eps>
-(epstopdf)             \includegraphics on input line 5.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -933,28 +921,25 @@ pdfTeX warning: pdflatex.exe (file ./upsw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
 <upsw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf, id=12, 12
-18.5525pt x 651.43375pt>
+04.5pt x 689.57625pt>
 File: upsw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use upsw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>
 Package pdftex.def Info: upsw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-con
-verted-to.pdf  used on input line 5.
-(pdftex.def)             Requested size: 463.05476pt x 247.5474pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 457.71477pt x 262.04169pt.
 Package epstopdf Info: Source file: <upsw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2.eps>
-(epstopdf)                    date: 2022-12-06 12:37:45
-(epstopdf)                    size: 196990 bytes
+(epstopdf)                    date: 2022-12-08 15:42:31
+(epstopdf)                    size: 234278 bytes
 (epstopdf)             Output file: <upsw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 12:38:35
-(epstopdf)                    size: 71084 bytes
+(epstopdf)                    date: 2022-12-08 15:42:52
+(epstopdf)                    size: 71362 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=upsw2cp(1)1cp(2)2cs(
 1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf upsw2cp(1)1cp(2)2cs(1)0,3cs(20,
 5rho(1)1rho(2)2.eps>
-(epstopdf)             \includegraphics on input line 5.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -962,57 +947,51 @@ pdfTeX warning: pdflatex.exe (file ./upsw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
 <upsw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf, id=13, 12
-30.5975pt x 648.4225pt>
+04.5pt x 689.57625pt>
 File: upsw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use upsw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>
 Package pdftex.def Info: upsw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-con
-verted-to.pdf  used on input line 5.
-(pdftex.def)             Requested size: 467.63191pt x 246.4031pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 457.71477pt x 262.04169pt.
 Package epstopdf Info: Source file: <upsw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2.eps>
-(epstopdf)                    date: 2022-12-06 12:38:21
-(epstopdf)                    size: 115778 bytes
+(epstopdf)                    date: 2022-12-08 15:43:57
+(epstopdf)                    size: 141805 bytes
 (epstopdf)             Output file: <upsw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 12:38:37
-(epstopdf)                    size: 49361 bytes
+(epstopdf)                    date: 2022-12-08 15:44:10
+(epstopdf)                    size: 50970 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=upsw5cp(1)1cp(2)2cs(
 1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf upsw5cp(1)1cp(2)2cs(1)0,3cs(20,
 5rho(1)1rho(2)2.eps>
-(epstopdf)             \includegraphics on input line 5.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./upsw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
-<upsw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf, id=14, 12
-24.575pt x 651.43375pt>
+<upsw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf, id=14, 11
+94.4625pt x 696.6025pt>
 File: upsw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use upsw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>
 Package pdftex.def Info: upsw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-con
-verted-to.pdf  used on input line 5.
-(pdftex.def)             Requested size: 465.34334pt x 247.5474pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 453.90047pt x 264.7117pt.
 Package epstopdf Info: Source file: <upsw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rh
 o(2)2.eps>
-(epstopdf)                    date: 2022-12-06 12:40:01
-(epstopdf)                    size: 121679 bytes
+(epstopdf)                    date: 2022-12-08 15:46:51
+(epstopdf)                    size: 143608 bytes
 (epstopdf)             Output file: <upsw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rh
 o(2)2-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 12:40:15
-(epstopdf)                    size: 53153 bytes
+(epstopdf)                    date: 2022-12-08 15:47:15
+(epstopdf)                    size: 51490 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=upsw10cp(1)1cp(2)2cs
 (1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf upsw10cp(1)1cp(2)2cs(1)0,3cs(2
 0,5rho(1)1rho(2)2.eps>
-(epstopdf)             \includegraphics on input line 5.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1020,28 +999,25 @@ pdfTeX warning: pdflatex.exe (file ./upsw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rh
 o(2)2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at mos
 t version <1.5> allowed
 <upsw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf, id=15, 1
-212.53pt x 651.43375pt>
+198.4775pt x 689.57625pt>
 File: upsw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf Grap
 hic file (type pdf)
 <use upsw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>
 Package pdftex.def Info: upsw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-co
-nverted-to.pdf  used on input line 5.
-(pdftex.def)             Requested size: 460.76619pt x 247.5474pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+nverted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 455.42618pt x 262.04169pt.
 Package epstopdf Info: Source file: <uspw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2.eps>
-(epstopdf)                    date: 2022-12-06 12:42:27
-(epstopdf)                    size: 201683 bytes
+(epstopdf)                    date: 2022-12-10 22:22:54
+(epstopdf)                    size: 239878 bytes
 (epstopdf)             Output file: <uspw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 12:44:34
-(epstopdf)                    size: 77329 bytes
+(epstopdf)                    date: 2022-12-10 22:23:12
+(epstopdf)                    size: 78578 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=uspw1cp(1)1cp(2)2cs(
 1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf uspw1cp(1)1cp(2)2cs(1)0,3cs(20,
 5rho(1)1rho(2)2.eps>
-(epstopdf)             \includegraphics on input line 5.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1049,28 +1025,25 @@ pdfTeX warning: pdflatex.exe (file ./uspw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
 <uspw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf, id=16, 12
-18.5525pt x 651.43375pt>
+04.5pt x 689.57625pt>
 File: uspw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use uspw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>
 Package pdftex.def Info: uspw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-con
-verted-to.pdf  used on input line 5.
-(pdftex.def)             Requested size: 463.05476pt x 247.5474pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 457.71477pt x 262.04169pt.
 Package epstopdf Info: Source file: <uspw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2.eps>
-(epstopdf)                    date: 2022-12-06 12:43:22
-(epstopdf)                    size: 197548 bytes
+(epstopdf)                    date: 2022-12-10 22:24:56
+(epstopdf)                    size: 235289 bytes
 (epstopdf)             Output file: <uspw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 12:44:36
-(epstopdf)                    size: 72928 bytes
+(epstopdf)                    date: 2022-12-10 22:27:23
+(epstopdf)                    size: 75818 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=uspw2cp(1)1cp(2)2cs(
 1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf uspw2cp(1)1cp(2)2cs(1)0,3cs(20,
 5rho(1)1rho(2)2.eps>
-(epstopdf)             \includegraphics on input line 5.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1078,28 +1051,25 @@ pdfTeX warning: pdflatex.exe (file ./uspw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
 <uspw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf, id=17, 12
-30.5975pt x 651.43375pt>
+04.5pt x 689.57625pt>
 File: uspw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use uspw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>
 Package pdftex.def Info: uspw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-con
-verted-to.pdf  used on input line 5.
-(pdftex.def)             Requested size: 467.63191pt x 247.5474pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 457.71477pt x 262.04169pt.
 Package epstopdf Info: Source file: <uspw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2.eps>
-(epstopdf)                    date: 2022-12-06 12:44:02
-(epstopdf)                    size: 119081 bytes
+(epstopdf)                    date: 2022-12-10 22:26:20
+(epstopdf)                    size: 145599 bytes
 (epstopdf)             Output file: <uspw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 12:44:37
-(epstopdf)                    size: 51135 bytes
+(epstopdf)                    date: 2022-12-10 22:27:24
+(epstopdf)                    size: 55017 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=uspw5cp(1)1cp(2)2cs(
 1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf uspw5cp(1)1cp(2)2cs(1)0,3cs(20,
 5rho(1)1rho(2)2.eps>
-(epstopdf)             \includegraphics on input line 5.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1107,28 +1077,25 @@ pdfTeX warning: pdflatex.exe (file ./uspw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
 <uspw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf, id=18, 11
-81.41376pt x 672.5125pt>
+81.41376pt x 689.57625pt>
 File: uspw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use uspw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>
 Package pdftex.def Info: uspw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-con
-verted-to.pdf  used on input line 5.
-(pdftex.def)             Requested size: 448.9419pt x 255.5574pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 448.9419pt x 262.04169pt.
 Package epstopdf Info: Source file: <uspw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rh
 o(2)2.eps>
-(epstopdf)                    date: 2022-12-06 12:46:33
-(epstopdf)                    size: 122254 bytes
+(epstopdf)                    date: 2022-12-10 22:28:27
+(epstopdf)                    size: 150484 bytes
 (epstopdf)             Output file: <uspw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rh
 o(2)2-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 12:46:44
-(epstopdf)                    size: 53955 bytes
+(epstopdf)                    date: 2022-12-10 22:28:40
+(epstopdf)                    size: 57180 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=uspw10cp(1)1cp(2)2cs
 (1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf uspw10cp(1)1cp(2)2cs(1)0,3cs(2
 0,5rho(1)1rho(2)2.eps>
-(epstopdf)             \includegraphics on input line 5.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1136,28 +1103,25 @@ pdfTeX warning: pdflatex.exe (file ./uspw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rh
 o(2)2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at mos
 t version <1.5> allowed
 <uspw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf, id=19, 1
-181.41376pt x 672.5125pt>
+181.41376pt x 689.57625pt>
 File: uspw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf Grap
 hic file (type pdf)
 <use uspw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>
 Package pdftex.def Info: uspw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-co
-nverted-to.pdf  used on input line 5.
-(pdftex.def)             Requested size: 448.9419pt x 255.5574pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+nverted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 448.9419pt x 262.04169pt.
 Package epstopdf Info: Source file: <ussw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2.eps>
-(epstopdf)                    date: 2022-12-06 12:48:12
-(epstopdf)                    size: 200787 bytes
+(epstopdf)                    date: 2022-12-10 22:30:35
+(epstopdf)                    size: 229331 bytes
 (epstopdf)             Output file: <ussw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 12:49:53
-(epstopdf)                    size: 81005 bytes
+(epstopdf)                    date: 2022-12-10 22:30:53
+(epstopdf)                    size: 83514 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ussw1cp(1)1cp(2)2cs(
 1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf ussw1cp(1)1cp(2)2cs(1)0,3cs(20,
 5rho(1)1rho(2)2.eps>
-(epstopdf)             \includegraphics on input line 5.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1165,28 +1129,25 @@ pdfTeX warning: pdflatex.exe (file ./ussw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
 <ussw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf, id=20, 12
-05.50375pt x 651.43375pt>
+05.50375pt x 689.57625pt>
 File: ussw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use ussw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>
 Package pdftex.def Info: ussw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-con
-verted-to.pdf  used on input line 5.
-(pdftex.def)             Requested size: 458.09619pt x 247.5474pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 458.09619pt x 262.04169pt.
 Package epstopdf Info: Source file: <ussw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2.eps>
-(epstopdf)                    date: 2022-12-06 12:48:48
-(epstopdf)                    size: 196826 bytes
+(epstopdf)                    date: 2022-12-10 22:31:57
+(epstopdf)                    size: 228957 bytes
 (epstopdf)             Output file: <ussw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 12:49:55
-(epstopdf)                    size: 76421 bytes
+(epstopdf)                    date: 2022-12-10 22:32:13
+(epstopdf)                    size: 82756 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ussw2cp(1)1cp(2)2cs(
 1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf ussw2cp(1)1cp(2)2cs(1)0,3cs(20,
 5rho(1)1rho(2)2.eps>
-(epstopdf)             \includegraphics on input line 5.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1194,28 +1155,25 @@ pdfTeX warning: pdflatex.exe (file ./ussw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
 <ussw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf, id=21, 12
-05.50375pt x 651.43375pt>
+05.50375pt x 689.57625pt>
 File: ussw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use ussw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>
 Package pdftex.def Info: ussw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-con
-verted-to.pdf  used on input line 5.
-(pdftex.def)             Requested size: 458.09619pt x 247.5474pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 458.09619pt x 262.04169pt.
 Package epstopdf Info: Source file: <ussw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2.eps>
-(epstopdf)                    date: 2022-12-06 12:49:15
-(epstopdf)                    size: 116673 bytes
+(epstopdf)                    date: 2022-12-10 22:33:18
+(epstopdf)                    size: 142717 bytes
 (epstopdf)             Output file: <ussw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 12:49:56
-(epstopdf)                    size: 50699 bytes
+(epstopdf)                    date: 2022-12-10 22:34:37
+(epstopdf)                    size: 54006 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ussw5cp(1)1cp(2)2cs(
 1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf ussw5cp(1)1cp(2)2cs(1)0,3cs(20,
 5rho(1)1rho(2)2.eps>
-(epstopdf)             \includegraphics on input line 5.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1223,28 +1181,25 @@ pdfTeX warning: pdflatex.exe (file ./ussw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho
 (2)2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
 <ussw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf, id=22, 11
-99.48125pt x 651.43375pt>
+99.48125pt x 689.57625pt>
 File: ussw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use ussw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>
 Package pdftex.def Info: ussw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-con
-verted-to.pdf  used on input line 5.
-(pdftex.def)             Requested size: 455.80762pt x 247.5474pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 455.80762pt x 262.04169pt.
 Package epstopdf Info: Source file: <ussw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rh
 o(2)2.eps>
-(epstopdf)                    date: 2022-12-06 12:49:45
-(epstopdf)                    size: 119979 bytes
+(epstopdf)                    date: 2022-12-10 22:34:21
+(epstopdf)                    size: 145351 bytes
 (epstopdf)             Output file: <ussw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rh
 o(2)2-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 12:49:58
-(epstopdf)                    size: 53372 bytes
+(epstopdf)                    date: 2022-12-10 22:34:39
+(epstopdf)                    size: 54438 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ussw10cp(1)1cp(2)2cs
 (1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf ussw10cp(1)1cp(2)2cs(1)0,3cs(2
 0,5rho(1)1rho(2)2.eps>
-(epstopdf)             \includegraphics on input line 5.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1252,28 +1207,25 @@ pdfTeX warning: pdflatex.exe (file ./ussw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rh
 o(2)2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at mos
 t version <1.5> allowed
 <ussw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf, id=23, 1
-199.48125pt x 651.43375pt>
+199.48125pt x 689.57625pt>
 File: ussw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf Grap
 hic file (type pdf)
 <use ussw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>
 Package pdftex.def Info: ussw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-co
-nverted-to.pdf  used on input line 5.
-(pdftex.def)             Requested size: 455.80762pt x 247.5474pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+nverted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 455.80762pt x 262.04169pt.
 Package epstopdf Info: Source file: <uppw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1.eps>
-(epstopdf)                    date: 2022-12-06 13:04:47
-(epstopdf)                    size: 202081 bytes
+(epstopdf)                    date: 2022-12-10 22:39:38
+(epstopdf)                    size: 230845 bytes
 (epstopdf)             Output file: <uppw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 13:06:07
-(epstopdf)                    size: 79795 bytes
+(epstopdf)                    date: 2022-12-10 22:41:27
+(epstopdf)                    size: 79499 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=uppw1cp(1)2cp(2)1cs(
 1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf uppw1cp(1)2cp(2)1cs(1)0,5cs(20,
 3rho(1)2rho(2)1.eps>
-(epstopdf)             \includegraphics on input line 5.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1281,28 +1233,25 @@ pdfTeX warning: pdflatex.exe (file ./uppw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
 <uppw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf, id=24, 12
-18.5525pt x 651.43375pt>
+04.5pt x 689.57625pt>
 File: uppw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use uppw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>
 Package pdftex.def Info: uppw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-con
-verted-to.pdf  used on input line 5.
-(pdftex.def)             Requested size: 463.05476pt x 247.5474pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 457.71477pt x 262.04169pt.
 Package epstopdf Info: Source file: <uppw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1.eps>
-(epstopdf)                    date: 2022-12-06 13:05:29
-(epstopdf)                    size: 198358 bytes
+(epstopdf)                    date: 2022-12-10 22:40:57
+(epstopdf)                    size: 227503 bytes
 (epstopdf)             Output file: <uppw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 13:06:09
-(epstopdf)                    size: 76284 bytes
+(epstopdf)                    date: 2022-12-10 22:41:29
+(epstopdf)                    size: 78862 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=uppw2cp(1)2cp(2)1cs(
 1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf uppw2cp(1)2cp(2)1cs(1)0,5cs(20,
 3rho(1)2rho(2)1.eps>
-(epstopdf)             \includegraphics on input line 5.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1310,57 +1259,51 @@ pdfTeX warning: pdflatex.exe (file ./uppw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
 <uppw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf, id=25, 12
-30.5975pt x 651.43375pt>
+16.545pt x 689.57625pt>
 File: uppw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use uppw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>
 Package pdftex.def Info: uppw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-con
-verted-to.pdf  used on input line 5.
-(pdftex.def)             Requested size: 467.63191pt x 247.5474pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 462.2919pt x 262.04169pt.
 Package epstopdf Info: Source file: <uppw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1.eps>
-(epstopdf)                    date: 2022-12-06 13:07:38
-(epstopdf)                    size: 117117 bytes
+(epstopdf)                    date: 2022-12-10 22:42:52
+(epstopdf)                    size: 145381 bytes
 (epstopdf)             Output file: <uppw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 13:08:11
-(epstopdf)                    size: 50946 bytes
+(epstopdf)                    date: 2022-12-10 22:43:05
+(epstopdf)                    size: 55311 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=uppw5cp(1)2cp(2)1cs(
 1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf uppw5cp(1)2cp(2)1cs(1)0,5cs(20,
 3rho(1)2rho(2)1.eps>
-(epstopdf)             \includegraphics on input line 5.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./uppw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
-<uppw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf, id=26, 12
-24.575pt x 672.5125pt>
+<uppw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf, id=26, 11
+63.34625pt x 696.6025pt>
 File: uppw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use uppw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>
 Package pdftex.def Info: uppw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-con
-verted-to.pdf  used on input line 5.
-(pdftex.def)             Requested size: 465.34334pt x 255.5574pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 442.07617pt x 264.7117pt.
 Package epstopdf Info: Source file: <uppw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rh
 o(2)1.eps>
-(epstopdf)                    date: 2022-12-06 13:09:55
-(epstopdf)                    size: 121650 bytes
+(epstopdf)                    date: 2022-12-10 22:44:07
+(epstopdf)                    size: 149171 bytes
 (epstopdf)             Output file: <uppw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rh
 o(2)1-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 13:10:11
-(epstopdf)                    size: 54062 bytes
+(epstopdf)                    date: 2022-12-10 22:45:53
+(epstopdf)                    size: 55711 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=uppw10cp(1)2cp(2)1cs
 (1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf uppw10cp(1)2cp(2)1cs(1)0,5cs(2
 0,3rho(1)2rho(2)1.eps>
-(epstopdf)             \includegraphics on input line 6.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1368,28 +1311,25 @@ pdfTeX warning: pdflatex.exe (file ./uppw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rh
 o(2)1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at mos
 t version <1.5> allowed
 <uppw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf, id=27, 1
-224.575pt x 672.5125pt>
+161.33875pt x 696.6025pt>
 File: uppw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf Grap
 hic file (type pdf)
 <use uppw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>
 Package pdftex.def Info: uppw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-co
-nverted-to.pdf  used on input line 6.
-(pdftex.def)             Requested size: 465.34334pt x 255.5574pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+nverted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 441.31331pt x 264.7117pt.
 Package epstopdf Info: Source file: <upsw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1.eps>
-(epstopdf)                    date: 2022-12-06 13:12:59
-(epstopdf)                    size: 201965 bytes
+(epstopdf)                    date: 2022-12-10 22:45:39
+(epstopdf)                    size: 215714 bytes
 (epstopdf)             Output file: <upsw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 13:17:35
-(epstopdf)                    size: 74737 bytes
+(epstopdf)                    date: 2022-12-10 22:45:55
+(epstopdf)                    size: 74567 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=upsw1cp(1)2cp(2)1cs(
 1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf upsw1cp(1)2cp(2)1cs(1)0,5cs(20,
 3rho(1)2rho(2)1.eps>
-(epstopdf)             \includegraphics on input line 6.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1397,28 +1337,25 @@ pdfTeX warning: pdflatex.exe (file ./upsw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
 <upsw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf, id=28, 12
-05.50375pt x 651.43375pt>
+18.5525pt x 689.57625pt>
 File: upsw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use upsw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>
 Package pdftex.def Info: upsw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-con
-verted-to.pdf  used on input line 6.
-(pdftex.def)             Requested size: 458.09619pt x 247.5474pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 463.05476pt x 262.04169pt.
 Package epstopdf Info: Source file: <upsw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1.eps>
-(epstopdf)                    date: 2022-12-06 13:13:37
-(epstopdf)                    size: 197408 bytes
+(epstopdf)                    date: 2022-12-10 22:47:07
+(epstopdf)                    size: 225741 bytes
 (epstopdf)             Output file: <upsw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 13:17:36
-(epstopdf)                    size: 70101 bytes
+(epstopdf)                    date: 2022-12-10 22:47:23
+(epstopdf)                    size: 69768 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=upsw2cp(1)2cp(2)1cs(
 1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf upsw2cp(1)2cp(2)1cs(1)0,5cs(20,
 3rho(1)2rho(2)1.eps>
-(epstopdf)             \includegraphics on input line 6.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1426,28 +1363,25 @@ pdfTeX warning: pdflatex.exe (file ./upsw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
 <upsw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf, id=29, 12
-18.5525pt x 651.43375pt>
+16.545pt x 689.57625pt>
 File: upsw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use upsw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>
 Package pdftex.def Info: upsw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-con
-verted-to.pdf  used on input line 6.
-(pdftex.def)             Requested size: 463.05476pt x 247.5474pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 462.2919pt x 262.04169pt.
 Package epstopdf Info: Source file: <upsw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1.eps>
-(epstopdf)                    date: 2022-12-06 13:14:01
-(epstopdf)                    size: 119241 bytes
+(epstopdf)                    date: 2022-12-10 22:48:10
+(epstopdf)                    size: 147172 bytes
 (epstopdf)             Output file: <upsw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 13:17:38
-(epstopdf)                    size: 50738 bytes
+(epstopdf)                    date: 2022-12-10 22:49:02
+(epstopdf)                    size: 53534 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=upsw5cp(1)2cp(2)1cs(
 1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf upsw5cp(1)2cp(2)1cs(1)0,5cs(20,
 3rho(1)2rho(2)1.eps>
-(epstopdf)             \includegraphics on input line 6.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1455,28 +1389,25 @@ pdfTeX warning: pdflatex.exe (file ./upsw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
 <upsw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf, id=30, 11
-99.48125pt x 672.5125pt>
+81.41376pt x 689.57625pt>
 File: upsw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use upsw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>
 Package pdftex.def Info: upsw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-con
-verted-to.pdf  used on input line 6.
-(pdftex.def)             Requested size: 455.80762pt x 255.5574pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 448.9419pt x 262.04169pt.
 Package epstopdf Info: Source file: <upsw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rh
 o(2)1.eps>
-(epstopdf)                    date: 2022-12-06 13:14:22
-(epstopdf)                    size: 122987 bytes
+(epstopdf)                    date: 2022-12-10 22:48:50
+(epstopdf)                    size: 149638 bytes
 (epstopdf)             Output file: <upsw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rh
 o(2)1-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 13:17:39
-(epstopdf)                    size: 53845 bytes
+(epstopdf)                    date: 2022-12-10 22:49:04
+(epstopdf)                    size: 54173 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=upsw10cp(1)2cp(2)1cs
 (1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf upsw10cp(1)2cp(2)1cs(1)0,5cs(2
 0,3rho(1)2rho(2)1.eps>
-(epstopdf)             \includegraphics on input line 6.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1484,28 +1415,25 @@ pdfTeX warning: pdflatex.exe (file ./upsw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rh
 o(2)1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at mos
 t version <1.5> allowed
 <upsw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf, id=31, 1
-181.41376pt x 672.5125pt>
+181.41376pt x 689.57625pt>
 File: upsw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf Grap
 hic file (type pdf)
 <use upsw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>
 Package pdftex.def Info: upsw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-co
-nverted-to.pdf  used on input line 6.
-(pdftex.def)             Requested size: 448.9419pt x 255.5574pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+nverted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 448.9419pt x 262.04169pt.
 Package epstopdf Info: Source file: <uspw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1.eps>
-(epstopdf)                    date: 2022-12-06 13:15:33
-(epstopdf)                    size: 196188 bytes
+(epstopdf)                    date: 2022-12-10 22:50:57
+(epstopdf)                    size: 229139 bytes
 (epstopdf)             Output file: <uspw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 13:17:41
-(epstopdf)                    size: 75304 bytes
+(epstopdf)                    date: 2022-12-10 22:51:09
+(epstopdf)                    size: 77425 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=uspw1cp(1)2cp(2)1cs(
 1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf uspw1cp(1)2cp(2)1cs(1)0,5cs(20,
 3rho(1)2rho(2)1.eps>
-(epstopdf)             \includegraphics on input line 6.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1513,28 +1441,25 @@ pdfTeX warning: pdflatex.exe (file ./uspw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
 <uspw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf, id=32, 12
-05.50375pt x 645.41125pt>
+05.50375pt x 689.57625pt>
 File: uspw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use uspw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>
 Package pdftex.def Info: uspw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-con
-verted-to.pdf  used on input line 6.
-(pdftex.def)             Requested size: 458.09619pt x 245.25882pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 458.09619pt x 262.04169pt.
 Package epstopdf Info: Source file: <uspw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1.eps>
-(epstopdf)                    date: 2022-12-06 13:16:27
-(epstopdf)                    size: 195099 bytes
+(epstopdf)                    date: 2022-12-10 22:52:31
+(epstopdf)                    size: 231742 bytes
 (epstopdf)             Output file: <uspw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 13:17:42
-(epstopdf)                    size: 70531 bytes
+(epstopdf)                    date: 2022-12-10 22:52:45
+(epstopdf)                    size: 75445 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=uspw2cp(1)2cp(2)1cs(
 1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf uspw2cp(1)2cp(2)1cs(1)0,5cs(20,
 3rho(1)2rho(2)1.eps>
-(epstopdf)             \includegraphics on input line 6.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1542,28 +1467,25 @@ pdfTeX warning: pdflatex.exe (file ./uspw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
 <uspw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf, id=33, 12
-30.5975pt x 651.43375pt>
+13.53375pt x 689.57625pt>
 File: uspw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use uspw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>
 Package pdftex.def Info: uspw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-con
-verted-to.pdf  used on input line 6.
-(pdftex.def)             Requested size: 467.63191pt x 247.5474pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 461.14763pt x 262.04169pt.
 Package epstopdf Info: Source file: <uspw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1.eps>
-(epstopdf)                    date: 2022-12-06 13:16:59
-(epstopdf)                    size: 118659 bytes
+(epstopdf)                    date: 2022-12-10 22:53:49
+(epstopdf)                    size: 149163 bytes
 (epstopdf)             Output file: <uspw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 13:17:43
-(epstopdf)                    size: 51194 bytes
+(epstopdf)                    date: 2022-12-10 22:56:09
+(epstopdf)                    size: 56664 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=uspw5cp(1)2cp(2)1cs(
 1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf uspw5cp(1)2cp(2)1cs(1)0,5cs(20,
 3rho(1)2rho(2)1.eps>
-(epstopdf)             \includegraphics on input line 6.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1571,28 +1493,25 @@ pdfTeX warning: pdflatex.exe (file ./uspw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
 <uspw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf, id=34, 11
-99.48125pt x 672.5125pt>
+81.41376pt x 689.57625pt>
 File: uspw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use uspw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>
 Package pdftex.def Info: uspw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-con
-verted-to.pdf  used on input line 6.
-(pdftex.def)             Requested size: 455.80762pt x 255.5574pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 448.9419pt x 262.04169pt.
 Package epstopdf Info: Source file: <uspw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rh
 o(2)1.eps>
-(epstopdf)                    date: 2022-12-06 13:17:26
-(epstopdf)                    size: 121779 bytes
+(epstopdf)                    date: 2022-12-10 22:54:40
+(epstopdf)                    size: 147655 bytes
 (epstopdf)             Output file: <uspw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rh
 o(2)1-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 13:17:45
-(epstopdf)                    size: 53882 bytes
+(epstopdf)                    date: 2022-12-10 22:56:10
+(epstopdf)                    size: 55871 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=uspw10cp(1)2cp(2)1cs
 (1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf uspw10cp(1)2cp(2)1cs(1)0,5cs(2
 0,3rho(1)2rho(2)1.eps>
-(epstopdf)             \includegraphics on input line 6.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1600,57 +1519,51 @@ pdfTeX warning: pdflatex.exe (file ./uspw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rh
 o(2)1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at mos
 t version <1.5> allowed
 <uspw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf, id=35, 1
-181.41376pt x 672.5125pt>
+181.41376pt x 689.57625pt>
 File: uspw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf Grap
 hic file (type pdf)
 <use uspw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>
 Package pdftex.def Info: uspw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-co
-nverted-to.pdf  used on input line 6.
-(pdftex.def)             Requested size: 448.9419pt x 255.5574pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+nverted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 448.9419pt x 262.04169pt.
 Package epstopdf Info: Source file: <ussw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1.eps>
-(epstopdf)                    date: 2022-12-06 13:23:58
-(epstopdf)                    size: 201275 bytes
+(epstopdf)                    date: 2022-12-10 22:55:57
+(epstopdf)                    size: 229060 bytes
 (epstopdf)             Output file: <ussw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 13:26:06
-(epstopdf)                    size: 79324 bytes
+(epstopdf)                    date: 2022-12-10 22:56:12
+(epstopdf)                    size: 80864 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ussw1cp(1)2cp(2)1cs(
 1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf ussw1cp(1)2cp(2)1cs(1)0,5cs(20,
 3rho(1)2rho(2)1.eps>
-(epstopdf)             \includegraphics on input line 6.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./ussw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
-<ussw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf, id=36, 11
-87.43625pt x 651.43375pt>
+<ussw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf, id=36, 12
+05.50375pt x 689.57625pt>
 File: ussw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use ussw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>
 Package pdftex.def Info: ussw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-con
-verted-to.pdf  used on input line 6.
-(pdftex.def)             Requested size: 451.23047pt x 247.5474pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 458.09619pt x 262.04169pt.
 Package epstopdf Info: Source file: <ussw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1.eps>
-(epstopdf)                    date: 2022-12-06 13:24:37
-(epstopdf)                    size: 197015 bytes
+(epstopdf)                    date: 2022-12-10 22:57:37
+(epstopdf)                    size: 227260 bytes
 (epstopdf)             Output file: <ussw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 13:26:08
-(epstopdf)                    size: 74079 bytes
+(epstopdf)                    date: 2022-12-10 22:57:47
+(epstopdf)                    size: 78811 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ussw2cp(1)2cp(2)1cs(
 1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf ussw2cp(1)2cp(2)1cs(1)0,5cs(20,
 3rho(1)2rho(2)1.eps>
-(epstopdf)             \includegraphics on input line 6.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1658,57 +1571,51 @@ pdfTeX warning: pdflatex.exe (file ./ussw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
 <ussw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf, id=37, 12
-05.50375pt x 651.43375pt>
+18.5525pt x 689.57625pt>
 File: ussw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use ussw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>
 Package pdftex.def Info: ussw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-con
-verted-to.pdf  used on input line 6.
-(pdftex.def)             Requested size: 458.09619pt x 247.5474pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 463.05476pt x 262.04169pt.
 Package epstopdf Info: Source file: <ussw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1.eps>
-(epstopdf)                    date: 2022-12-06 13:25:31
-(epstopdf)                    size: 116644 bytes
+(epstopdf)                    date: 2022-12-10 22:58:32
+(epstopdf)                    size: 140690 bytes
 (epstopdf)             Output file: <ussw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 13:26:09
-(epstopdf)                    size: 51218 bytes
+(epstopdf)                    date: 2022-12-10 22:59:27
+(epstopdf)                    size: 53835 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ussw5cp(1)2cp(2)1cs(
 1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf ussw5cp(1)2cp(2)1cs(1)0,5cs(20,
 3rho(1)2rho(2)1.eps>
-(epstopdf)             \includegraphics on input line 6.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./ussw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho
 (2)1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most
  version <1.5> allowed
-<ussw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf, id=38, 12
-12.53pt x 651.43375pt>
+<ussw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf, id=38, 11
+98.4775pt x 689.57625pt>
 File: ussw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use ussw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>
 Package pdftex.def Info: ussw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-con
-verted-to.pdf  used on input line 6.
-(pdftex.def)             Requested size: 460.76619pt x 247.5474pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+verted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 455.42618pt x 262.04169pt.
 Package epstopdf Info: Source file: <ussw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rh
 o(2)1.eps>
-(epstopdf)                    date: 2022-12-06 13:25:56
-(epstopdf)                    size: 119949 bytes
+(epstopdf)                    date: 2022-12-10 22:59:11
+(epstopdf)                    size: 144512 bytes
 (epstopdf)             Output file: <ussw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rh
 o(2)1-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-06 13:26:10
-(epstopdf)                    size: 53979 bytes
+(epstopdf)                    date: 2022-12-10 22:59:29
+(epstopdf)                    size: 55309 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ussw10cp(1)2cp(2)1cs
 (1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf ussw10cp(1)2cp(2)1cs(1)0,5cs(2
 0,3rho(1)2rho(2)1.eps>
-(epstopdf)             \includegraphics on input line 6.
+(epstopdf)             \includegraphics on input line 1.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1716,50 +1623,145 @@ pdfTeX warning: pdflatex.exe (file ./ussw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rh
 o(2)1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at mos
 t version <1.5> allowed
 <ussw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf, id=39, 1
-212.53pt x 651.43375pt>
+198.4775pt x 689.57625pt>
 File: ussw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf Grap
 hic file (type pdf)
 <use ussw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>
 Package pdftex.def Info: ussw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-co
-nverted-to.pdf  used on input line 6.
-(pdftex.def)             Requested size: 460.76619pt x 247.5474pt.
+nverted-to.pdf  used on input line 1.
+(pdftex.def)             Requested size: 455.42618pt x 262.04169pt.
+)
+Underfull \hbox (badness 1616) in paragraph at lines 69--84
+[]\T2A/cmr/m/up/14.4 Исследуются уста-но-вив-ши-е-ся гар-мо-ни-че-ские ко-ле-ба
+-ния упру-го-го
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [1{C:/Users/tiama/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
- <./uppw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf> <./upp
-w2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>] [2 <./uppw5c
-p(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf> <./uppw10cp(1)1c
-p(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>] [3 <./upsw1cp(1)1cp(2
-)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf> <./upsw2cp(1)1cp(2)2cs(1)
-0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>] [4 <./upsw5cp(1)1cp(2)2cs(1)0,3
-cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf> <./upsw10cp(1)1cp(2)2cs(1)0,3cs(20,
-5rho(1)1rho(2)2-eps-converted-to.pdf>] [5 <./uspw1cp(1)1cp(2)2cs(1)0,3cs(20,5rh
-o(1)1rho(2)2-eps-converted-to.pdf> <./uspw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rh
-o(2)2-eps-converted-to.pdf>] [6 <./uspw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2
-)2-eps-converted-to.pdf> <./uspw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps
--converted-to.pdf>] [7 <./ussw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-co
-nverted-to.pdf> <./ussw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted
--to.pdf>]
-[8 <./ussw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf> <./u
-ssw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>] [9 <./upp
-w1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf> <./uppw2cp(1)
-2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>] [10 <./uppw5cp(1)2c
-p(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf> <./uppw10cp(1)2cp(2)1c
-s(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>] [11 <./upsw1cp(1)2cp(2)1cs(
-1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf> <./upsw2cp(1)2cp(2)1cs(1)0,5cs
-(20,3rho(1)2rho(2)1-eps-converted-to.pdf>] [12 <./upsw5cp(1)2cp(2)1cs(1)0,5cs(2
-0,3rho(1)2rho(2)1-eps-converted-to.pdf> <./upsw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho
-(1)2rho(2)1-eps-converted-to.pdf>] [13 <./uspw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1
-)2rho(2)1-eps-converted-to.pdf> <./uspw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2
-)1-eps-converted-to.pdf>] [14 <./uspw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1
--eps-converted-to.pdf> <./uspw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-c
-onverted-to.pdf>] [15 <./ussw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-con
-verted-to.pdf> <./ussw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-
-to.pdf>] [16 <./ussw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to
-.pdf> <./ussw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>]
-(report.aux)
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[1{C:/Users/tiama/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
+
+ <./uppw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>] [2 <.
+/uppw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf> <./uppw5c
+p(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>] [3 <./uppw10cp(
+1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf> <./upsw1cp(1)1cp(2
+)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>] [4 <./upsw2cp(1)1cp(2)2c
+s(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf> <./upsw5cp(1)1cp(2)2cs(1)0,3
+cs(20,5rho(1)1rho(2)2-eps-converted-to.pdf>] [5 <./upsw10cp(1)1cp(2)2cs(1)0,3cs
+(20,5rho(1)1rho(2)2-eps-converted-to.pdf> <./uspw1cp(1)1cp(2)2cs(1)0,3cs(20,5rh
+o(1)1rho(2)2-eps-converted-to.pdf>] [6 <./uspw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1
+)1rho(2)2-eps-converted-to.pdf> <./uspw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2
+)2-eps-converted-to.pdf>] [7 <./uspw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2
+-eps-converted-to.pdf> <./ussw1cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-co
+nverted-to.pdf>] [8 <./ussw2cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-conve
+rted-to.pdf> <./ussw5cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to
+.pdf>] [9 <./ussw10cp(1)1cp(2)2cs(1)0,3cs(20,5rho(1)1rho(2)2-eps-converted-to.p
+df> <./uppw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>] [1
+0 <./uppw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf> <./up
+pw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>] [11 <./uppw
+10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf> <./upsw1cp(1)
+2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>] [12 <./upsw2cp(1)2c
+p(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf> <./upsw5cp(1)2cp(2)1cs
+(1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf>] [13 <./upsw10cp(1)2cp(2)1cs(
+1)0,5cs(20,3rho(1)2rho(2)1-eps-converted-to.pdf> <./uspw1cp(1)2cp(2)1cs(1)0,5cs
+(20,3rho(1)2rho(2)1-eps-converted-to.pdf>] [14 <./uspw2cp(1)2cp(2)1cs(1)0,5cs(2
+0,3rho(1)2rho(2)1-eps-converted-to.pdf> <./uspw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(
+1)2rho(2)1-eps-converted-to.pdf>] [15 <./uspw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1
+)2rho(2)1-eps-converted-to.pdf> <./ussw1cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2
+)1-eps-converted-to.pdf>] [16 <./ussw2cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1
+-eps-converted-to.pdf> <./ussw5cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-co
+nverted-to.pdf>] [17 <./ussw10cp(1)2cp(2)1cs(1)0,5cs(20,3rho(1)2rho(2)1-eps-con
+verted-to.pdf>] (report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1767,13 +1769,13 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14028 strings out of 478927
- 210015 string characters out of 2862391
- 556791 words of memory out of 3000000
+ 14029 strings out of 478927
+ 209994 string characters out of 2862391
+ 550791 words of memory out of 3000000
  31570 multiletter control sequences out of 15000+600000
  415478 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,7n,66p,3901b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,8n,66p,4680b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\tiama\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx20
 74.pk> <C:\Users\tiama\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\la
 rm1440.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
@@ -1781,9 +1783,9 @@ rm1440.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
 les/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX/
 fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmr12.pfb>
-Output written on report.pdf (16 pages, 2072903 bytes).
+Output written on report.pdf (17 pages, 2136494 bytes).
 PDF statistics:
- 357 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
+ 364 PDF objects out of 1000 (max. 8388607)
+ 19 named destinations out of 1000 (max. 500000)
  181 words of extra memory for PDF output out of 10000 (max. 10000000)
 

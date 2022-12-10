@@ -60,26 +60,10 @@ PROGRAM isotSc
               
         call makeStudy
         
+        call saveResults
         
-        open(1, file='integral.txt', FORM='FORMATTED')
-        open(2, file='stPhase.txt', FORM='FORMATTED')
         
-        write(1,*) "% the field is ", field
-        write(1,'(A)') "% Dinn5 settings , t1, t2, t3, t4, tm, tp, eps, step, IntLimit"
-        write(1,'((A),9E15.6E3)') "% ", t1, t2, t3, t4, tm, tp, eps, step, IntLimit
-        write(1,'(A)') "% 1)psi, 2) R, 3) x, 4) z, 5) re(u), 6) im(u), 7) abs(u), 8) re(w), 9) im(w), 10) abs(w), 11) fieldCode, 12) cp(1), 13) cp(2), 14) cs(1), 15) cs(2), 16) rho(1), 17) rho(2), 18) h, 19) w"
-        
-        write(2,*) "% the field is ", field
-        write(2,'(A)') "% Dinn5 settings , t1, t2, t3, t4, tm, tp, eps, step, IntLimit"
-        write(2,'((A),9E15.6E3)') "% ", t1, t2, t3, t4, tm, tp, eps, step, IntLimit
-        write(2,'(A)') "%psi, R, x, z, re(u), im(u), abs(u), re(w), im(w), abs(w), fieldCode, cp(1), cp(2), cs(1), cs(2), rho(1), rho(2), h, w"
-        
-        do i = 1, pointsNumber
-            write(1, '(19E15.6E3)') psis(i), Rs(i), x(i), z(i), real(integral_horis(i)), imag(integral_horis(i)), abs(integral_horis(i)), real(integral_vert(i)), imag(integral_vert(i)), abs(integral_vert(i)), fieldCode, cp(1), cp(2), cs(1), cs(2), rho(1), rho(2), h, singleW
-            write(2, '(19E15.6E3)') psis(i), Rs(i), x(i), z(i), real(stPhase(1,i)),      imag(stPhase(1,i)),      abs(stPhase(1,i)),      real(stPhase(2,i)),     imag(stPhase(2,i)),     abs(stPhase(2,i)), fieldCode, cp(1), cp(2), cs(1), cs(2), rho(1), rho(2), h, singleW
-        enddo  
-        close(1); 
-        close(2);
+
      
         
         
@@ -140,9 +124,55 @@ PROGRAM isotSc
                 call uss_stPhase(pointsNumber, psis, Rs, kappa, kappaCap, lambda(1), lambda(2), mu(1), mu(2), stPhase)
             else 
                 print*, "Check field name in input file!"; pause;
-            end if    
-            
+            end if           
         END SUBROUTINE makeStudy
+        
+        
+        
+        SUBROUTINE saveResults
+            if (mode == 'polar') then
+                open(1, file='integral_polar.txt', FORM='FORMATTED')
+                open(2, file='stPhase_polar.txt', FORM='FORMATTED')
+        
+                write(1,*) "% the field is ", field
+                write(1,'(A)') "% Dinn5 settings , t1, t2, t3, t4, tm, tp, eps, step, IntLimit"
+                write(1,'((A),9E15.6E3)') "% ", t1, t2, t3, t4, tm, tp, eps, step, IntLimit
+                write(1,'(A)') "% 1)psi, 2) R, 3) x, 4) z, 5) re(u), 6) im(u), 7) abs(u), 8) re(w), 9) im(w), 10) abs(w), 11) fieldCode, 12) cp(1), 13) cp(2), 14) cs(1), 15) cs(2), 16) rho(1), 17) rho(2), 18) h, 19) w"
+        
+                write(2,*) "% the field is ", field
+                write(2,'(A)') "% Dinn5 settings , t1, t2, t3, t4, tm, tp, eps, step, IntLimit"
+                write(2,'((A),9E15.6E3)') "% ", t1, t2, t3, t4, tm, tp, eps, step, IntLimit
+                write(2,'(A)') "%psi, R, x, z, re(u), im(u), abs(u), re(w), im(w), abs(w), fieldCode, cp(1), cp(2), cs(1), cs(2), rho(1), rho(2), h, w"
+        
+                do i = 1, pointsNumber
+                    write(1, '(19E15.6E3)') psis(i), Rs(i), x(i), z(i), real(integral_horis(i)), imag(integral_horis(i)), abs(integral_horis(i)), real(integral_vert(i)), imag(integral_vert(i)), abs(integral_vert(i)), fieldCode, cp(1), cp(2), cs(1), cs(2), rho(1), rho(2), h, singleW
+                    write(2, '(19E15.6E3)') psis(i), Rs(i), x(i), z(i), real(stPhase(1,i)),      imag(stPhase(1,i)),      abs(stPhase(1,i)),      real(stPhase(2,i)),     imag(stPhase(2,i)),     abs(stPhase(2,i)), fieldCode, cp(1), cp(2), cs(1), cs(2), rho(1), rho(2), h, singleW
+                enddo  
+                close(1); 
+                close(2);
+                
+            else if (mode == 'flat_') then
+                open(1, file='integral.txt', FORM='FORMATTED')
+                open(2, file='stPhase.txt', FORM='FORMATTED')
+        
+                write(1,*) "% the field is ", field
+                write(1,'(A)') "% Dinn5 settings , t1, t2, t3, t4, tm, tp, eps, step, IntLimit"
+                write(1,'((A),9E15.6E3)') "% ", t1, t2, t3, t4, tm, tp, eps, step, IntLimit
+                write(1,'(A)') "% 1)psi, 2) R, 3) x, 4) z, 5) re(u), 6) im(u), 7) abs(u), 8) re(w), 9) im(w), 10) abs(w), 11) fieldCode, 12) cp(1), 13) cp(2), 14) cs(1), 15) cs(2), 16) rho(1), 17) rho(2), 18) h, 19) w"
+        
+                write(2,*) "% the field is ", field
+                write(2,'(A)') "% Dinn5 settings , t1, t2, t3, t4, tm, tp, eps, step, IntLimit"
+                write(2,'((A),9E15.6E3)') "% ", t1, t2, t3, t4, tm, tp, eps, step, IntLimit
+                write(2,'(A)') "%psi, R, x, z, re(u), im(u), abs(u), re(w), im(w), abs(w), fieldCode, cp(1), cp(2), cs(1), cs(2), rho(1), rho(2), h, w"
+        
+                do i = 1, pointsNumber
+                    write(1, '(19E15.6E3)') psis(i), Rs(i), x(i), z(i), real(integral_horis(i)), imag(integral_horis(i)), abs(integral_horis(i)), real(integral_vert(i)), imag(integral_vert(i)), abs(integral_vert(i)), fieldCode, cp(1), cp(2), cs(1), cs(2), rho(1), rho(2), h, singleW
+                    write(2, '(19E15.6E3)') psis(i), Rs(i), x(i), z(i), real(stPhase(1,i)),      imag(stPhase(1,i)),      abs(stPhase(1,i)),      real(stPhase(2,i)),     imag(stPhase(2,i)),     abs(stPhase(2,i)), fieldCode, cp(1), cp(2), cs(1), cs(2), rho(1), rho(2), h, singleW
+                enddo  
+                close(1); 
+                close(2);
+            endif
+        END SUBROUTINE saveResults
     
     
     !                                                   *   *   *   
