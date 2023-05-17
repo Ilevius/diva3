@@ -1,0 +1,149 @@
+%2multibyte Version: 5.50.0.2960 CodePage: 1251
+%\usepackage[cp1251]{inputenc}
+%\usepackage{newthm}
+%\renewcommand{\baselinestretch}{1,25}
+
+\documentclass[a4paper,openany,oneside]{book}%
+\usepackage[14pt]{extsizes}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtext}
+\usepackage[unicode]{hyperref}
+\usepackage{cmap}
+\usepackage[cp1251]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage[matrix,arrow,curve]{xy}
+\usepackage{ccaption}
+\usepackage{misccorr}
+\usepackage{indentfirst}
+\usepackage{soul}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{Codepage=1251}
+%TCIDATA{CSTFile=LaTeX Book.cst}
+%TCIDATA{Created=Thursday, December 15, 2016 08:42:37}
+%TCIDATA{LastRevised=Wednesday, February 01, 2023 13:21:55}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{\indent Теорема}[section]
+\newtheorem{proposition}{\indent Предложение}[section]
+\newtheorem{lemma}{\indent Лемма}[section]
+\newtheorem{Characteristic}{\indent Свойство}[section]
+\newtheorem{corollary}{\indent Следствие}[chapter]
+\newtheorem{criterion}{\indent Критерий}[chapter]
+\newtheorem{example}{\indent Пример}[chapter]
+\newtheorem{remark}{\indent Замечание}[chapter]
+\newtheorem{algorithm}{\indent Алгоритм}
+\newtheorem{axiom}{\indent Аксиома}[chapter]
+\newtheorem{case}{\indent Случай}[chapter]
+\newtheorem{claim}{\indent Требование}[chapter]
+\newtheorem{conclusion}{\indent Заключение}[chapter]
+\newtheorem{condition}{\indent Условие}[chapter]
+\newtheorem{conjecture}{\indent Предположение}[chapter]
+\newtheorem{definition}{\indent Определение}[chapter]
+\newtheorem{exercise}{\indent Упражнение}[chapter]
+\newtheorem{problem}{\indent Задача}[chapter]
+\newtheorem{summary}{\indent Вывод}[chapter]
+\oddsidemargin 0cm \evensidemargin 0cm \textwidth 16,5cm \topmargin -2cm
+\renewcommand{\baselinestretch}{1,2}
+\textheight 27cm
+\newenvironment{proof}{\par{Д о к а з а т е л ь с т в о.}}{\ $\Box$\vspace{6pt}}
+\pagestyle{myheadings}
+\numberwithin{equation}{section}
+\parindent 1,2cm
+\sloppy
+\begin{document}
+%
+\[
+t_{i}=t_{1}^{i}e^{-\sigma_{1}h}+t_{2}^{i}e^{-\sigma_{2}h},i=1,..,4
+\]
+
+
+где $t_{j}^{i}$
+получается
+делением на
+определитель
+матрицы $A$
+определителя
+матрицы,
+полученной
+из $A$ заменой $i-$
+го столбца
+на $j$ столбец
+матрицы
+\[
+\left(
+\begin{array}
+[c]{ll}%
+-U_{1} & -U_{2}\\
+-W_{1} & -W_{2}\\
+-\mu_{1}(\sigma_{1}U_{1}-i\alpha W_{1}) & -\mu_{1}(\sigma_{2}U_{2}-i\alpha
+W_{2})\\
+\lambda_{1}i\alpha U_{1}-(\lambda_{1}+2\mu_{1})\sigma_{1}W_{1} & \lambda
+_{1}i\alpha U_{2}-(\lambda_{1}+2\mu_{1})\sigma_{2}W_{2}%
+\end{array}
+\right)  ,
+\]
+где
+\[
+A=\left(
+\begin{array}
+[c]{llll}%
+-i\alpha & \sigma_{2} & i\alpha & s_{2}\\
+-\sigma_{1} & -i\alpha & -s_{1} & i\alpha\\
+2\mu_{1}i\alpha\sigma_{1} & -\mu_{1}\left(  \alpha^{2}+\sigma_{2}^{2}\right)
+& 2\mu_{2}i\alpha s_{1} & \mu_{2}\left(  \alpha^{2}+s_{2}^{2}\right)  \\
+\mu_{1}\left(  \alpha^{2}+\sigma_{2}^{2}\right)   & 2\mu_{1}i\alpha\sigma_{2}
+& -\mu_{2}\left(  \alpha^{2}+s_{2}^{2}\right)   & 2\mu_{2}i\alpha s_{2}%
+\end{array}
+\right)  ,
+\]%
+\[
+\mathbf{U}_{0}(-h)=\left(
+\begin{array}
+[c]{l}%
+U_{1}\\
+W_{1}%
+\end{array}
+\right)  e^{-\sigma_{1}h}+\left(
+\begin{array}
+[c]{l}%
+U_{2}\\
+W_{2}%
+\end{array}
+\right)  e^{-\sigma_{2}h}=
+\]%
+\[
+=\left(
+\begin{array}
+[c]{l}%
+\frac{i\alpha\left(  \alpha^{2}-0,5\varkappa_{2}^{2}\right)  }{\Delta}\\
+\frac{-\left(  \alpha^{2}-0,5\varkappa_{2}^{2}\right)  \sigma_{1}}{\Delta}%
+\end{array}
+\right)  e^{-\sigma_{1}h}+\left(
+\begin{array}
+[c]{l}%
+\frac{-i\alpha\sigma_{1}\sigma_{2}}{\Delta}\\
+\frac{\sigma_{1}\alpha^{2}}{\Delta}%
+\end{array}
+\right)  e^{-\sigma_{2}h}%
+\]%
+\[
+\Delta=2\mu\left(  -\left(  \alpha^{2}-0.5\varkappa_{2}^{2}\right)
+^{2}+\alpha^{2}\sigma_{1}\sigma_{2}\right)
+\]
+
+
+\bigskip
+
+
+\end{document}

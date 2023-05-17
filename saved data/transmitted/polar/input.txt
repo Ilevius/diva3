@@ -1,0 +1,41 @@
+&media
+cp(2) = 1d0,
+cp(1) = 2d0,
+cs(2) = 0.3d0,
+cs(1) = 0.5d0,
+rho(2) = 1d0,
+rho(1) = 2d0,
+h = 1d0
+/
+&study
+mode = 'polar',
+field = 'psp'
+singleW = 10d0,
+wMin = 0d0, 
+wStep = 0d0, 
+wMax = 0d0,
+singlePsi = 0,
+psiMin = 183d0,
+psiNumber = 348,
+psiStep = 0.5d0,
+singleR = 30d0,
+Rmin = 0d0,
+Rstep = 0d0,
+Rmax = 0d0,
+zSingle = -1d0,
+xMin = 0.1d0,
+xMax = 20d0,
+xStep = 0.1d0,
+xSingle = 1d0
+/
+&dinn5Settings
+t1 = 0d0, 
+t2 = 0d0, 
+t3 = 0d0, 
+t4 = 0d0, 
+tm = 2d-2, 
+tp = 0d0, 
+eps = 1d-6, 
+step = 1d-2, 
+IntLimit = 1d5
+/

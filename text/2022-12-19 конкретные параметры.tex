@@ -1,0 +1,279 @@
+%2multibyte Version: 5.50.0.2960 CodePage: 1251
+%\usepackage[cp1251]{inputenc}
+%\usepackage{newthm}
+%\renewcommand{\baselinestretch}{1,25}
+
+\documentclass[a4paper,openany,oneside]{article}%
+\usepackage[14pt]{extsizes}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtext}
+\usepackage[unicode]{hyperref}
+\usepackage{cmap}
+\usepackage[cp1251]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage[matrix,arrow,curve]{xy}
+\usepackage{ccaption}
+\usepackage{misccorr}
+\usepackage{indentfirst}
+\usepackage{soul}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{Codepage=1251}
+%TCIDATA{CSTFile=article.cst}
+%TCIDATA{Created=Thursday, December 15, 2016 08:42:37}
+%TCIDATA{LastRevised=Tuesday, January 31, 2023 17:32:18}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{\indent Теорема}[section]
+\newtheorem{proposition}{\indent Предложение}[section]
+\newtheorem{lemma}{\indent Лемма}[section]
+\newtheorem{Characteristic}{\indent Свойство}[section]
+\newtheorem{corollary}{\indent Следствие}[section]
+\newtheorem{criterion}{\indent Критерий}[section]
+\newtheorem{example}{\indent Пример}[section]
+\newtheorem{remark}{\indent Замечание}[section]
+\newtheorem{algorithm}{\indent Алгоритм}
+\newtheorem{axiom}{\indent Аксиома}[section]
+\newtheorem{case}{\indent Случай}[section]
+\newtheorem{claim}{\indent Требование}[section]
+\newtheorem{conclusion}{\indent Заключение}[section]
+\newtheorem{condition}{\indent Условие}[section]
+\newtheorem{conjecture}{\indent Предположение}[section]
+\newtheorem{definition}{\indent Определение}[section]
+\newtheorem{exercise}{\indent Упражнение}[section]
+\newtheorem{problem}{\indent Задача}[section]
+\newtheorem{summary}{\indent Вывод}[section]
+\oddsidemargin 0cm \evensidemargin 0cm \textwidth 16,5cm \topmargin -2cm
+\renewcommand{\baselinestretch}{1,2}
+\textheight 27cm
+\newenvironment{proof}{\par{Д о к а з а т е л ь с т в о.}}{\ $\Box$\vspace{6pt}}
+\pagestyle{myheadings}
+\numberwithin{equation}{section}
+\parindent 1,2cm
+\sloppy
+\begin{document}
+\section{Постановка
+задачи}
+
+Исследуются
+установившиеся
+гармонические
+колебания
+упругого
+слоя
+толщиной $h$ на
+полупространстве.
+Нагрузка $\mathbf{q}(x)$
+приложена к
+поверхности
+$z=0$ верхнего
+слоя на
+отрезке $x\in\lbrack-a;a]$.
+Свойства слоев:
+
+\begin{center}%
+\begin{tabular}
+[c]{|l|l|l|l|}\hline
+& $c_{p}$ & $c_{s}$ & $\rho$\\\hline
+1 слой & $c_{p,1}$ & $c_{s,1}$ & $\rho_{1}$\\\hline
+2 слой & $c_{p,2}$ & $c_{s,2}$ & $\rho_{2}$\\\hline
+\end{tabular}
+
+
+
+\end{center}
+
+Предметом
+исследования
+является
+поле $\mathbf{u}=\left(  u,w\right)  $ -
+отраженное
+от границы
+слоев. Для
+получения
+хорошей
+асимптотики
+требуется,
+чтобы в
+толщине слоя
+укладывалось
+не менее 20
+длин волны
+давления.
+Точнее
+\[
+20\lambda_{p,1}<h\Rightarrow20\frac{2\pi c_{p,1}}{\omega}<h\Rightarrow
+\frac{40\pi c_{p,1}}{h}<\omega
+\]
+Будем
+строить поле
+на
+поверхности
+первого слоя
+т.е. $z=0$ при $x\in\left(  0;5h\right)  $
+(см. Рис. 1).
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=3]{5h.eps}\caption{Геометрия
+задачи}%
+\end{figure}Чтобы
+получить
+отраженное
+поле,
+необходимо
+построить
+поле
+источника
+\[
+\mathbf{u}_{0}\left(  x,z\right)  =\int\limits_{\Gamma}\mathbf{U}_{0}\left(
+\alpha,z\right)  e^{-i\alpha x}d\alpha=\int\limits_{\Gamma}K\left(
+\alpha,z\right)  \mathbf{Q}(\alpha)e^{-i\alpha x}d\alpha,
+\]
+для
+полупространства
+со
+свойствами
+первого слоя.
+
+Пусть $\varkappa_{1}=\frac{\omega}{c_{p,1}%
+},\varkappa_{2}=\frac{\omega}{c_{s,1}},\kappa_{1}=\frac{\omega}{c_{p,2}%
+},\kappa_{2}=\frac{\omega}{c_{s,2}},$
+\[
+\sigma_{n}=\left\{
+\begin{array}
+[c]{l}%
+-i\sqrt{\varkappa_{n}^{2}-\alpha^{2}},\alpha^{2}<\varkappa_{n}^{2}\\
+\sqrt{\alpha^{2}-\varkappa_{n}^{2}},\alpha^{2}>\varkappa_{n}^{2},
+\end{array}
+\right.
+\]
+%
+
+\[
+s_{n}=\left\{
+\begin{array}
+[c]{l}%
+-i\sqrt{\kappa_{n}^{2}-\alpha^{2}},\alpha^{2}<\kappa_{n}^{2}\\
+\sqrt{\alpha^{2}-\kappa_{n}^{2}},\alpha^{2}>\kappa_{n}^{2},
+\end{array}
+\right.
+\]
+
+
+Тогда
+Фурье-символ
+$\mathbf{U}_{-}$
+отраженного
+поля $\mathbf{u}_{-}$
+может быть
+представлен
+в виде
+\[
+\left\{
+\begin{array}
+[c]{l}%
+U_{-}=t_{1}\left(  -i\alpha\right)  e^{-\sigma_{1}\left(  z+h\right)  }%
+-t_{2}\left(  -\sigma_{2}\right)  e^{-\sigma_{2}\left(  z+h\right)  }\\
+W_{-}=t_{1}\left(  -\sigma_{1}\right)  e^{-\sigma_{1}\left(  z+h\right)
+}+t_{2}\left(  -i\alpha\right)  e^{-\sigma_{2}\left(  z+h\right)  },
+\end{array}
+\right.
+\]
+а
+Фурье-символ
+$\mathbf{U}_{+}$
+прошедшего
+поля $\mathbf{u}_{+}$ в
+виде
+\[
+\left\{
+\begin{array}
+[c]{l}%
+U_{+}=t_{3}\left(  -i\alpha\right)  e^{s_{1}\left(  z+h\right)  }-t_{4}%
+s_{2}e^{s_{2}\left(  z+h\right)  }\\
+W_{+}=t_{3}s_{1}e^{s_{1}\left(  z+h\right)  }+t_{4}\left(  -i\alpha\right)
+e^{s_{2}\left(  z+h\right)  },
+\end{array}
+\right.
+\]
+где
+коэффициенты
+$t_{i},i=1,..,4,$
+зависящие от
+$\alpha,$ являются
+решением
+системы
+\[
+A\left(
+\begin{array}
+[c]{l}%
+t_{1}\\
+t_{2}\\
+t_{3}\\
+t_{4}%
+\end{array}
+\right)  =\mathbf{f,}%
+\]
+которая
+вытекает из
+условия
+\[
+\left.  \lbrack\mathbf{u}]\right\vert _{z=-h}=0,\left.  [\boldsymbol{\tau
+}]\right\vert _{z=-h}=0
+\]
+непрерывности
+общих полей
+смещений и
+напряжений
+\[
+\mathbf{u}=\left\{
+\begin{array}
+[c]{l}%
+\mathbf{u}_{0}+\mathbf{u}_{-},\;z\geq-h\\
+\mathbf{u}_{+},\;z\leq-h,
+\end{array}
+\right.
+\]%
+\[
+\boldsymbol{\tau}=\left\{
+\begin{array}
+[c]{l}%
+\boldsymbol{\tau}_{0}+\boldsymbol{\tau}_{-},\;z\geq-h\\
+\boldsymbol{\tau}_{+},\;z\leq-h.
+\end{array}
+\right.
+\]
+
+
+\section{Численные
+примеры}
+
+Нагрузка $\mathbf{Q}%
+(\alpha)=\left(  0,1\right)  .$ Пусть
+свойства слоев:
+
+\begin{center}%
+\begin{tabular}
+[c]{|l|l|l|l|}\hline
+& $c_{p}$ & $c_{s}$ & $\rho$\\\hline
+1 слой & $2$ & $0.5$ & $2$\\\hline
+2 слой & $1$ & $0.3$ & $1$\\\hline
+\end{tabular}
+
+\end{center}
+
+выберем $h=1,$
+тогда $\omega>\frac{40\pi c_{p,1}}{h}=80\pi.$
+Выберем $\omega=250.$
+\end{document}

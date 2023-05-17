@@ -174,6 +174,42 @@ MODULE functions
                 D2ThetaPS = h/R*kappa(2)**2*den2 - h/R*kappa(1)**2*den1 - kappa(2)**2*sind(psi)*den2
         END FUNCTION D2ThetaPS
         
+        
+        
+        
+        ! N E W    P S   F U N C T I O N                        !!!!!!
+        
+        
+        
+        
+        
+        FUNCTION ThetaPSNew(alfa, h, R, r_small, kappa, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), psi, root1, root2, r_small
+            real*8  ThetaPSNew
+                root1 = sqrt( kappa(1)**2 - alfa**2 ); root2 = sqrt( kappa(2)**2 - alfa**2 );            
+                ThetaPSNew =  root2*(sind(psi) + (h-r_small)/R) + root1*h/R - alfa*cosd(psi)
+        END FUNCTION ThetaPSNew
+        
+
+        FUNCTION DThetaPSNew(alfa, h, R, r_small, kappa, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), psi, root1, root2, r_small
+            real*8  DThetaPSNew
+                root1 = sqrt( kappa(1)**2 - alfa**2 ); root2 = sqrt( kappa(2)**2 - alfa**2 );            
+                DThetaPSNew =  root1*(h*alfa-r_small*alfa+R*alfa*sind(psi)) + h*alfa*root2 + R*cosd(psi)*root1*root2
+        END FUNCTION DThetaPSNew
+        
+        
+        FUNCTION D2ThetaPSNew(alfa, h, R, r_small, kappa, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), psi, r_small
+            real*8  D2ThetaPSNew, den1, den2
+                den1 = 1d0/(sqrt(kappa(1)**2 - alfa**2))**3; den2 = 1d0/(sqrt(kappa(2)**2 - alfa**2))**3;
+                D2ThetaPSNew = den2*(r_small-h-R*sind(psi))*kappa(2)**2/R-den1*kappa(1)**2*h/R
+        END FUNCTION D2ThetaPSNew
+
+        
         !!                       usp               Phase function and its derivatives
         !!                                                   *   *   *
         FUNCTION ThetaSP(alfa, h, R, kappa, psi)
@@ -200,6 +236,144 @@ MODULE functions
                 den1 = 1d0/(sqrt(kappa(1)**2 - alfa**2))**3; den2 = 1d0/(sqrt(kappa(2)**2 - alfa**2))**3;
                 D2ThetaSP = h/R*kappa(1)**2*den1 - kappa(1)**2*sind(psi)*den1 - h/R*kappa(2)**2*den2 
         END FUNCTION D2ThetaSP
+        
+ !    P H A S E   F U N C T I O N S   F O R   U   P L U S
+ !                                        ______ ____   ___  __  __  __  ___  ___ __ ______ ______  ____ ____  
+ !                                        | || | || \\ // \\ ||\ || (( \ ||\\//|| || | || | | || | ||    || \\ 
+ !                                          ||   ||_// ||=|| ||\\||  \\  || \/ || ||   ||     ||   ||==  ||  ))
+ !                                          ||   || \\ || || || \|| \_)) ||    || ||   ||     ||   ||___ ||_//              f i e l d
+      
+!                                                                             __ __ ____  ____ 
+ !                                                                            || || || \\ || \\
+!                                                                             || || ||_// ||_//
+ !                                                                            \\_// ||    ||   
+!                  
+       
+        FUNCTION EtaPP(alfa, h, R, kappa, kappaCap, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), kappaCap(2), psi
+            real*8  EtaPP   
+                EtaPP = (sqrt(kappa(1)**2-alfa**2)+sqrt(kappaCap(1)**2-alfa**2))*h/R-sqrt(kappaCap(1)**2-alfa**2)*sind(psi)-alfa*cosd(psi)            
+        END FUNCTION EtaPP
+        
+
+        FUNCTION DEtaPP(alfa, h, R, kappa, kappaCap, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), kappaCap(2), psi
+            real*8  DEtaPP   
+                DEtaPP = h*alfa*sqrt(kappaCap(1)**2-alfa**2)+h*alfa*sqrt(kappa(1)**2-alfa**2)-R*alfa*sind(psi)*sqrt(kappa(1)**2-alfa**2)
+                DEtaPP = DEtaPP + R*cosd(psi)*sqrt(kappaCap(1)**2-alfa**2)*sqrt(kappa(1)**2-alfa**2)
+        END FUNCTION DEtaPP
+        
+        
+        FUNCTION D2EtaPP(alfa, h, R, kappa, kappaCap, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), kappaCap(2), psi
+            real*8  D2EtaPP, den1, den2
+                den1 = sqrt(kappaCap(1)**2-alfa**2)**3
+                den2 = sqrt(kappa(1)**2-alfa**2)**3
+                D2EtaPP = kappaCap(1)**2*sind(psi)/den1 - h/R*kappaCap(1)**2/den1 - h/R*kappa(1)**2/den2
+        END FUNCTION D2EtaPP
+        
     
+!                                                                         __ __ ____   __ 
+!                                                                         || || || \\ (( \
+!                                                                         || || ||_//  \\ 
+!                                                                         \\_// ||    \_))
+
+    
+        
+        
+        FUNCTION EtaPS(alfa, h, R, kappa, kappaCap, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), kappaCap(2), psi
+            real*8  EtaPS   
+                EtaPS = (sqrt(kappa(2)**2-alfa**2)+sqrt(kappaCap(1)**2-alfa**2))*h/R-sqrt(kappaCap(1)**2-alfa**2)*sind(psi)-alfa*cosd(psi)            
+        END FUNCTION EtaPS
+        
+
+        FUNCTION DEtaPS(alfa, h, R, kappa, kappaCap, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), kappaCap(2), psi
+            real*8  DEtaPS   
+                DEtaPS = h*alfa*sqrt(kappaCap(1)**2-alfa**2)+h*alfa*sqrt(kappa(2)**2-alfa**2)-R*alfa*sind(psi)*sqrt(kappa(2)**2-alfa**2)
+                DEtaPS = DEtaPS + R*cosd(psi)*sqrt(kappaCap(1)**2-alfa**2)*sqrt(kappa(2)**2-alfa**2)
+        END FUNCTION DEtaPS
+        
+        
+        FUNCTION D2EtaPS(alfa, h, R, kappa, kappaCap, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), kappaCap(2), psi
+            real*8  D2EtaPS, den1, den2
+                den1 = sqrt(kappaCap(1)**2-alfa**2)**3
+                den2 = sqrt(kappa(2)**2-alfa**2)**3
+                D2EtaPS = kappaCap(1)**2*sind(psi)/den1 - h/R*kappaCap(1)**2/den1 - h/R*kappa(2)**2/den2
+        END FUNCTION D2EtaPS
+        
+               
+!                                                                     __ __  __  ____ 
+ !                                                                    || || (( \ || \\
+!                                                                     || ||  \\  ||_//
+ !                                                                    \\_// \_)) ||   
+                 
+        FUNCTION EtaSP(alfa, h, R, kappa, kappaCap, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), kappaCap(2), psi
+            real*8  EtaSP   
+                EtaSP = (sqrt(kappa(1)**2-alfa**2)+sqrt(kappaCap(2)**2-alfa**2))*h/R-sqrt(kappaCap(2)**2-alfa**2)*sind(psi)-alfa*cosd(psi)            
+        END FUNCTION EtaSP
+        
+
+        FUNCTION DEtaSP(alfa, h, R, kappa, kappaCap, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), kappaCap(2), psi
+            real*8  DEtaSP   
+                DEtaSP = h*alfa*sqrt(kappaCap(2)**2-alfa**2)+h*alfa*sqrt(kappa(1)**2-alfa**2)-R*alfa*sind(psi)*sqrt(kappa(1)**2-alfa**2)
+                DEtaSP = DEtaSP + R*cosd(psi)*sqrt(kappaCap(2)**2-alfa**2)*sqrt(kappa(1)**2-alfa**2)
+        END FUNCTION DEtaSP
+        
+        
+        FUNCTION D2EtaSP(alfa, h, R, kappa, kappaCap, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), kappaCap(2), psi
+            real*8  D2EtaSP, den1, den2
+                den1 = sqrt(kappaCap(2)**2-alfa**2)**3
+                den2 = sqrt(kappa(1)**2-alfa**2)**3
+                D2EtaSP = kappaCap(2)**2*sind(psi)/den1 - h/R*kappaCap(2)**2/den1 - h/R*kappa(1)**2/den2
+        END FUNCTION D2EtaSP
+
+            
+!                                                                    __ __  __   __ 
+ !                                                                   || || (( \ (( \
+!                                                                    || ||  \\   \\ 
+ !                                                                   \\_// \_)) \_))
+!                
+  
+        FUNCTION EtaSS(alfa, h, R, kappa, kappaCap, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), kappaCap(2), psi
+            real*8  EtaSS   
+                EtaSS = (sqrt(kappa(2)**2-alfa**2)+sqrt(kappaCap(2)**2-alfa**2))*h/R-sqrt(kappaCap(2)**2-alfa**2)*sind(psi)-alfa*cosd(psi)            
+        END FUNCTION EtaSS
+        
+
+        FUNCTION DEtaSS(alfa, h, R, kappa, kappaCap, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), kappaCap(2), psi
+            real*8  DEtaSS   
+                DEtaSS = h*alfa*sqrt(kappaCap(2)**2-alfa**2)+h*alfa*sqrt(kappa(2)**2-alfa**2)-R*alfa*sind(psi)*sqrt(kappa(2)**2-alfa**2)
+                DEtaSS = DEtaSS + R*cosd(psi)*sqrt(kappaCap(2)**2-alfa**2)*sqrt(kappa(2)**2-alfa**2)
+        END FUNCTION DEtaSS
+        
+        
+        FUNCTION D2EtaSS(alfa, h, R, kappa, kappaCap, psi)
+            implicit none
+            real*8 alfa, h, R, kappa(2), kappaCap(2), psi
+            real*8  D2EtaSS, den1, den2
+                den1 = sqrt(kappaCap(2)**2-alfa**2)**3
+                den2 = sqrt(kappa(2)**2-alfa**2)**3
+                D2EtaSS = kappaCap(2)**2*sind(psi)/den1 - h/R*kappaCap(2)**2/den1 - h/R*kappa(2)**2/den2
+        END FUNCTION D2EtaSS
+
     
 END MODULE functions

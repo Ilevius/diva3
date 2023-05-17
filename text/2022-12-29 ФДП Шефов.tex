@@ -1,0 +1,595 @@
+%2multibyte Version: 5.50.0.2960 CodePage: 1251
+%\usepackage[cp1251]{inputenc}
+%\usepackage{newthm}
+%\renewcommand{\baselinestretch}{1,25}
+
+\documentclass[a4paper,openany,oneside]{article}%
+\usepackage[14pt]{extsizes}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtext}
+\usepackage[unicode]{hyperref}
+\usepackage{cmap}
+\usepackage[cp1251]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage[matrix,arrow,curve]{xy}
+\usepackage{ccaption}
+\usepackage{misccorr}
+\usepackage{indentfirst}
+\usepackage{soul}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{Codepage=1251}
+%TCIDATA{CSTFile=article.cst}
+%TCIDATA{Created=Thursday, December 15, 2016 08:42:37}
+%TCIDATA{LastRevised=Tuesday, January 17, 2023 18:12:10}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{\indent Теорема}[section]
+\newtheorem{proposition}{\indent Предложение}[section]
+\newtheorem{lemma}{\indent Лемма}[section]
+\newtheorem{Characteristic}{\indent Свойство}[section]
+\newtheorem{corollary}{\indent Следствие}[section]
+\newtheorem{criterion}{\indent Критерий}[section]
+\newtheorem{example}{\indent Пример}[section]
+\newtheorem{remark}{\indent Замечание}[section]
+\newtheorem{algorithm}{\indent Алгоритм}
+\newtheorem{axiom}{\indent Аксиома}[section]
+\newtheorem{case}{\indent Случай}[section]
+\newtheorem{claim}{\indent Требование}[section]
+\newtheorem{conclusion}{\indent Заключение}[section]
+\newtheorem{condition}{\indent Условие}[section]
+\newtheorem{conjecture}{\indent Предположение}[section]
+\newtheorem{definition}{\indent Определение}[section]
+\newtheorem{exercise}{\indent Упражнение}[section]
+\newtheorem{problem}{\indent Задача}[section]
+\newtheorem{summary}{\indent Вывод}[section]
+\oddsidemargin 0cm \evensidemargin 0cm \textwidth 16,5cm \topmargin -2cm
+\renewcommand{\baselinestretch}{1,2}
+\textheight 27cm
+\newenvironment{proof}{\par{Д о к а з а т е л ь с т в о.}}{\ $\Box$\vspace{6pt}}
+\pagestyle{myheadings}
+\numberwithin{equation}{section}
+\parindent 1,2cm
+\sloppy
+\begin{document}
+\section{Постановка
+задачи}
+
+Исследуются
+установившиеся
+гармонические
+колебания
+упругого
+слоя
+толщиной $h$ на
+полупространстве.
+Нагрузка $\mathbf{q}(x)$
+приложена к
+поверхности
+$z=0$ верхнего
+слоя на
+отрезке $x\in\lbrack-a;a]$.
+Свойства слоев:
+
+\begin{center}%
+\begin{tabular}
+[c]{|l|l|l|l|}\hline
+& $c_{p}$ & $c_{s}$ & $\rho$\\\hline
+1 слой & $c_{p,1}$ & $c_{s,1}$ & $\rho_{1}$\\\hline
+2 слой & $c_{p,2}$ & $c_{s,2}$ & $\rho_{2}$\\\hline
+\end{tabular}
+
+\end{center}
+
+Пусть $\varkappa_{1}=\frac{\omega}{c_{p,1}%
+},\varkappa_{2}=\frac{\omega}{c_{s,1}},\kappa_{1}=\frac{\omega}{c_{p,2}%
+},\kappa_{2}=\frac{\omega}{c_{s,2}}.$
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=3]{5h.eps}\caption{Геометрия
+задачи}%
+\end{figure}
+
+\subsection{Поле
+источника $\mathbf{u}%
+_{0},\;\mathbf{x=(}x,z\mathbf{)}$}%
+
+\[
+\mathbf{u}_{0}\left(  x,z\right)  =\frac{1}{2\pi}\int\limits_{\Gamma
+}\mathbf{U}_{0}\left(  \alpha,z\right)  e^{-i\alpha x}d\alpha=\mathbf{u}%
+_{p}+\mathbf{u}_{s}=\mathbf{u}_{1}+\mathbf{u}_{2}%
+\]%
+\[
+\mathbf{U}_{0}\left(  \alpha,z\right)  =K\left(  \alpha,z\right)
+\mathbf{Q}(\alpha)=\sum_{n=1}^{2}\mathbf{A}_{n}(\alpha)e^{\sigma_{n}z},
+\]
+где $K$ -- матрица
+Грина для
+однородного
+полупространства
+со
+свойствами
+первого слоя
+($c_{p,1},c_{s,1},\rho_{1}$), $\mathbf{Q}=\mathcal{F}_{x}[\mathbf{q}]$ --
+нагрузка. $\mathbf{A}%
+_{n}=K_{n}\mathbf{Q},$ где $K_{n}:K=\sum\limits_{n=1}%
+^{2}K_{n}(\alpha)e^{\sigma_{n}z}$%
+
+\[
+\sigma_{n}=\left\{
+\begin{array}
+[c]{l}%
+-i\sqrt{\varkappa_{n}^{2}-\alpha^{2}},\alpha^{2}<\varkappa_{n}^{2}\\
+\sqrt{\alpha^{2}-\varkappa_{n}^{2}},\alpha^{2}>\varkappa_{n}^{2},
+\end{array}
+\right.
+\]
+
+
+\subsection{Асимптотика
+$\mathbf{u}_{0}$}
+
+\bigskip%
+\[
+\left\{
+\begin{array}
+[c]{l}%
+x=R\cos\psi\\
+z=R\sin\psi<0
+\end{array}
+\right.
+\]
+$R=\left\vert \mathbf{x}\right\vert =\sqrt{x^{2}+z^{2}},\,\pi<\psi<2\pi$
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=3]{polar.eps}\caption{Полярная
+система
+координат}%
+\end{figure}
+
+\bigskip%
+\[
+\mathbf{u}_{n}=\frac{\varkappa_{n}\left\vert \sin\psi\right\vert }{\sqrt{2\pi
+i}}\mathbf{a}_{n}(\psi)\frac{e^{i\varkappa_{n}R}}{\sqrt{\varkappa_{n}R}%
+}[1+o(\frac{1}{\varkappa_{n}R})],\,\varkappa_{n}R\gg1,\,n=1,2
+\]%
+\[
+\mathbf{a}_{n}=\mathbf{A}_{n}(\alpha_{n})=K_{n}(\alpha_{n})\mathbf{Q}%
+(\alpha_{n})
+\]%
+\[
+\alpha_{n}=-\varkappa_{n}\cos\psi
+\]
+
+
+\bigskip
+
+\subsection{
+Отраженное
+поле $\mathbf{u}_{-}(x,z)$}%
+
+\[
+\mathbf{u}_{-}\left(  x,z\right)  =\frac{1}{2\pi}\int\limits_{\Gamma
+}\mathbf{U}_{-}\left(  \alpha,z\right)  e^{-i\alpha x}d\alpha,\,z\geq-h
+\]
+\[
+\mathbf{U}_{-}=\left(  U_{-},W_{-}\right)  ^{T}%
+\]
+%
+
+\[
+\left\{
+\begin{array}
+[c]{l}%
+U_{-}=t_{1}\left(  -i\alpha\right)  e^{-\sigma_{1}\left(  z+h\right)  }%
+-t_{2}\left(  -\sigma_{2}\right)  e^{-\sigma_{2}\left(  z+h\right)  }\\
+W_{-}=t_{1}\left(  -\sigma_{1}\right)  e^{-\sigma_{1}\left(  z+h\right)
+}+t_{2}\left(  -i\alpha\right)  e^{-\sigma_{2}\left(  z+h\right)  },
+\end{array}
+\right.
+\]
+%
+
+\[
+\mathbf{u}_{+}\left(  x,z\right)  =\frac{1}{2\pi}\int\limits_{\Gamma
+}\mathbf{U}_{+}\left(  \alpha,z\right)  e^{-i\alpha x}d\alpha,\,z\geq-h
+\]%
+\[
+\left\{
+\begin{array}
+[c]{l}%
+U_{+}=t_{3}\left(  -i\alpha\right)  e^{s_{1}\left(  z+h\right)  }-t_{4}%
+s_{2}e^{s_{2}\left(  z+h\right)  }\\
+W_{+}=t_{3}s_{1}e^{s_{1}\left(  z+h\right)  }+t_{4}\left(  -i\alpha\right)
+e^{s_{2}\left(  z+h\right)  },
+\end{array}
+\right.
+\]%
+\[
+s_{n}=\left\{
+\begin{array}
+[c]{l}%
+-i\sqrt{\kappa_{n}^{2}-\alpha^{2}},\alpha^{2}<\kappa_{n}^{2}\\
+\sqrt{\alpha^{2}-\kappa_{n}^{2}},\alpha^{2}>\kappa_{n}^{2},
+\end{array}
+\right.
+\]
+где $\mathbf{t}=(t_{1},t_{2},t_{3},t_{4})^{T}$
+определяется
+из системы
+\[
+A\mathbf{t}=\mathbf{f,f=f}_{1}e^{-\sigma_{1}h}+\mathbf{f}_{2}e^{-\sigma_{2}h}%
+\]
+
+
+Матрица $A$ и
+правая часть
+$\mathbf{f}$
+получаются
+из условия
+непрерывности
+$\mathbf{u}$ и $\boldsymbol{\tau}$ на $z=-h:$
+\[
+\left\{
+\begin{array}
+[c]{l}%
+\mathbf{u}_{0}+\mathbf{u}_{-}=\mathbf{u}_{+}\\
+\boldsymbol{\tau}_{0}+\boldsymbol{\tau}_{-}=\boldsymbol{\tau}_{+}%
+\end{array}
+\right.  \Rightarrow\left\{
+\begin{array}
+[c]{l}%
+\mathbf{u}_{-}-\mathbf{u}_{+}=-\mathbf{u}_{0}\\
+\boldsymbol{\tau}_{-}-\boldsymbol{\tau}_{+}=-\boldsymbol{\tau}_{0}%
+\end{array}
+\right.  ,\,z=-h
+\]
+$\boldsymbol{\tau=}T\mathbf{u}=(\tau_{x},\sigma_{z}),$
+\[
+\left\{
+\begin{array}
+[c]{l}%
+\tau_{x}=\mu\left(  \frac{\partial u}{\partial z}+\frac{\partial w}{\partial
+x}\right) \\
+\sigma_{z}=\lambda\frac{\partial u}{\partial x}+\left(  \lambda+2\mu\right)
+\frac{\partial w}{\partial z}%
+\end{array}
+\right.
+\]
+
+
+\bigskip\  В
+Фурье-символах:
+\[
+\left\{
+\begin{array}
+[c]{l}%
+U_{-}-U_{+}=-U_{0}\\
+W_{-}-W_{+}=-W_{0}\\
+T_{x}^{-}-T_{x}^{+}=-T_{x}^{0}\\
+S_{z}^{-}-S_{z}^{+}=-S_{z}^{0}%
+\end{array}
+\right.  ,\,z=-h
+\]%
+\[
+\left\{
+\begin{array}
+[c]{l}%
+T_{x}^{-}=\mu_{1}(2i\mu\sigma_{1}t_{1}-(\alpha^{2}+\sigma_{2}^{2})t_{2})\\
+S_{z}^{-}=\mu_{1}(\alpha^{2}+\sigma_{2}^{2})t_{1}+2\mu_{1}i\alpha\sigma
+_{2}t_{2}\\
+T_{x}^{+}=\mu_{2}(-2i\alpha s_{1}t_{3}-(\alpha^{2}+s_{2}^{2})t_{4})\\
+S_{z}^{+}=\mu_{2}(\alpha^{2}+s_{2}^{2})t_{3}+2\mu_{2}i\alpha s_{2}t_{4}%
+\end{array}
+\right.  ,\,z=-h
+\]%
+\[
+A=\left(
+\begin{array}
+[c]{llll}%
+-i\alpha & \sigma_{2} & i\alpha & s_{2}\\
+-\sigma_{1} & -i\alpha & -s_{1} & i\alpha\\
+2\mu_{1}i\alpha\sigma_{1} & -\mu_{1}\left(  \alpha^{2}+\sigma_{2}^{2}\right)
+& 2\mu_{2}i\alpha s_{1} & \mu_{2}\left(  \alpha^{2}+s_{2}^{2}\right) \\
+\mu_{1}\left(  \alpha^{2}+\sigma_{2}^{2}\right)  & 2\mu_{1}i\alpha\sigma_{2} &
+-\mu_{2}\left(  \alpha^{2}+s_{2}^{2}\right)  & 2\mu_{2}i\alpha s_{2}%
+\end{array}
+\right)
+\]
+$\mathbf{f}=-\left(
+\begin{array}
+[c]{l}%
+\mathbf{U}_{0}\\
+\mathbf{T}_{0}%
+\end{array}
+\right)  ,$ при $z=-h$
+
+$U_{0}(-h)=\left(
+\begin{array}
+[c]{l}%
+U_{1}\\
+W_{1}%
+\end{array}
+\right)  e^{-\sigma_{1}h}+\left(
+\begin{array}
+[c]{l}%
+U_{2}\\
+W_{2}%
+\end{array}
+\right)  e^{-\sigma_{2}h}$
+
+$\mathbf{V}_{n}=\left(
+\begin{array}
+[c]{l}%
+U_{n}\\
+W_{n}%
+\end{array}
+\right)  =K_{n}(\alpha,-h)\mathbf{Q},n=1,2$
+
+$\mathbf{T}_{0}=T(-i\alpha,\frac{\partial}{\partial z})\mathbf{U}_{0}%
+=\sum\limits_{n=1}^{2}T_{n}\mathbf{V}_{n}e_{n}$
+
+$T_{n}=\left(
+\begin{array}
+[c]{ll}%
+\mu_{1}\sigma_{n} & -\mu_{1}i\alpha\\
+-\lambda_{1}i\alpha & \left(  \lambda_{1}+2\mu_{1}\right)  \sigma_{n}%
+\end{array}
+\right)  $
+
+Соответственно
+$\mathbf{f}=\mathbf{f}_{1}e_{1}+\mathbf{f}_{2}e_{2}\Rightarrow$
+
+$\mathbf{f}_{n}=\left(
+\begin{array}
+[c]{l}%
+-\mathbf{V}_{n}\\
+-T_{n}\mathbf{V}_{n}%
+\end{array}
+\right)  ,n=1,2$
+
+или
+
+$\mathbf{f}_{1}=\left(
+\begin{array}
+[c]{l}%
+-U_{1}\\
+-W_{1}\\
+-\mu_{1}(\sigma_{1}U_{1}-i\alpha W_{1})\\
+\lambda_{1}i\alpha U_{1}-(\lambda_{1}+2\mu_{1})\sigma_{1}W_{1}%
+\end{array}
+\right)  ,\mathbf{f}_{2}=\left(
+\begin{array}
+[c]{l}%
+-U_{2}\\
+-W_{2}\\
+-\mu_{1}(\sigma_{2}U_{2}-i\alpha W_{2})\\
+\lambda_{1}i\alpha U_{2}-(\lambda_{1}+2\mu_{1})\sigma_{2}W_{2}%
+\end{array}
+\right)  $
+
+В
+соответствии
+со
+структурой
+$\mathbf{f}$
+
+$\mathbf{t}=\mathbf{t}_{1}e^{\sigma_{1}z}+\mathbf{t}_{2}e^{\sigma_{2}z},$
+где $A\mathbf{f}_{n}=f_{n},n=1,2$
+
+т.е. каждая
+константа $t_{j}$
+расщепляется
+на два слагаемых:
+
+$t_{j}=t_{1}^{(j)}e^{\sigma_{1}z}+t_{2}^{(j)}e^{\sigma_{2}z},$
+где $t_{n}^{(j)}:$
+
+$\mathbf{t}_{n}=(t_{n}^{(1)},t_{n}^{(2)},t_{n}^{(3)},t_{n}^{(4)}),n=1,2$ --
+решение $A\mathbf{t}_{n}%
+=\mathbf{f}_{n}$
+
+\bigskip\  Или в
+полярных
+координатах
+$(R,\psi):$%
+
+\[
+\left\{
+\begin{array}
+[c]{l}%
+\theta_{11}=\hat{\sigma}_{1}\sin\psi-\alpha\cos\psi\\
+\theta_{12}=\hat{\sigma}_{1}\sin\psi+(\hat{\sigma}_{2}-\hat{\sigma}_{1}%
+)\frac{h}{R}-\alpha\cos\psi\\
+\theta_{21}=\hat{\sigma}_{2}\sin\psi+(\hat{\sigma}_{1}-\hat{\sigma}_{2}%
+)\frac{h}{R}-\alpha\cos\psi\\
+\theta_{22}=\hat{\sigma}_{2}\sin\psi-\alpha\cos\psi
+\end{array}
+\right.
+\]
+
+
+\bigskip
+\  Стационарные
+точки $\alpha_{nm}$
+определяются
+из уравнений
+$\theta_{nm}^{^{\prime}}(\alpha)=0$%
+
+\[
+\left\{
+\begin{array}
+[c]{l}%
+\theta_{11}^{^{\prime}}=-\frac{\alpha}{\hat{\sigma}_{1}}\sin\psi-\cos
+\psi=0;\alpha_{11}=-\varkappa_{1}\cos\psi\\
+\theta_{12}^{^{\prime}}=-\frac{\alpha}{\hat{\sigma}_{1}}\sin\psi+(\frac
+{\alpha}{\hat{\sigma}_{1}}-\frac{\alpha}{\hat{\sigma}_{2}})\frac{h}{R}%
+-\cos\psi=0\\
+\theta_{21}^{^{\prime}}=-\frac{\alpha}{\hat{\sigma}_{2}}\sin\psi-(\frac
+{\alpha}{\hat{\sigma}_{1}}-\frac{\alpha}{\hat{\sigma}_{2}})\frac{h}{R}%
+-\cos\psi=0\\
+\theta_{22}^{^{\prime}}=-\frac{\alpha}{\hat{\sigma}_{2}}\sin\psi-\cos
+\psi=0;\alpha_{22}=-\varkappa_{2}\cos\psi
+\end{array}
+\right.
+\]
+
+
+\bigskip Радикалы в
+точках $\alpha=\alpha_{nm}$
+
+1. $n=m$ $\hat{\sigma}_{1}(\alpha_{11})=\varkappa_{1}\sin\psi>0;\hat{\sigma
+}_{2}(\alpha_{22})=\varkappa_{2}\sin\psi>0;$
+
+$\theta_{11}^{^{0}}=\theta_{11}(\alpha_{11})=\varkappa_{1};\theta_{22}^{^{0}%
+}=\theta_{22}(\alpha_{22})=\varkappa_{2}$
+
+\bigskip
+
+\bigskip
+
+Предметом
+исследования
+является
+поле $\mathbf{u}=\left(  u,w\right)  $ -
+отраженное
+от гранnицы
+слоев. Для
+получения
+хорошей
+асимптотики
+требуется,
+чтобы в
+толщине слоя
+укладывалось
+не менее 20
+длин волны
+давления.
+Точнее
+\[
+20\lambda_{p,1}<h\Rightarrow20\frac{2\pi c_{p,1}}{\omega}<h\Rightarrow
+\frac{40\pi c_{p,1}}{h}<\omega
+\]
+Будем
+строить поле
+на
+поверхности
+первого слоя
+т.е. $z=0$ при $x\in\left(  0;5h\right)  $
+(см. Рис. 1).
+
+Чтобы
+получить
+отраженное
+поле,
+необходимо
+построить
+поле
+источника
+\[
+\mathbf{u}_{0}\left(  x,z\right)  =\int\limits_{\Gamma}\mathbf{U}_{0}\left(
+\alpha,z\right)  e^{-i\alpha x}d\alpha=\int\limits_{\Gamma}K\left(
+\alpha,z\right)  \mathbf{Q}(\alpha)e^{-i\alpha x}d\alpha,
+\]
+для
+полупространства
+со
+свойствами
+первого
+слоя.
+\[
+\sigma_{n}=\left\{
+\begin{array}
+[c]{l}%
+-i\sqrt{\varkappa_{n}^{2}-\alpha^{2}},\alpha^{2}<\varkappa_{n}^{2}\\
+\sqrt{\alpha^{2}-\varkappa_{n}^{2}},\alpha^{2}>\varkappa_{n}^{2},
+\end{array}
+\right.
+\]
+
+
+Тогда
+Фурье-символ
+$\mathbf{U}_{-}$
+отраженного
+поля $\mathbf{u}_{-}$
+может быть
+представлен
+в виде а
+Фурье-символ
+$\mathbf{U}_{+}$
+прошедшего
+поля $\mathbf{u}_{+}$ в
+виде где
+коэффициенты
+$t_{i},i=1,..,4,$
+зависящие от
+$\alpha,$ являются
+решением
+системы
+\[
+\]
+которая
+вытекает из
+условия
+\[
+\left.  \lbrack\mathbf{u}]\right\vert _{z=-h}=0,\left.  [\boldsymbol{\tau
+}]\right\vert _{z=-h}=0
+\]
+непрерывности
+общих полей
+смещений и
+напряжений
+\[
+\mathbf{u}=\left\{
+\begin{array}
+[c]{l}%
+\mathbf{u}_{0}+\mathbf{u}_{-},\;z\geq-h\\
+\mathbf{u}_{+},\;z\leq-h,
+\end{array}
+\right.
+\]%
+\[
+\boldsymbol{\tau}=\left\{
+\begin{array}
+[c]{l}%
+\boldsymbol{\tau}_{0}+\boldsymbol{\tau}_{-},\;z\geq-h\\
+\boldsymbol{\tau}_{+},\;z\leq-h.
+\end{array}
+\right.
+\]
+
+
+\section{Численные
+примеры}
+
+Нагрузка $\mathbf{Q}%
+(\alpha)=\left(  0,1\right)  .$ Пусть
+свойства слоев:
+
+\begin{center}%
+\begin{tabular}
+[c]{|l|l|l|l|}\hline
+& $c_{p}$ & $c_{s}$ & $\rho$\\\hline
+1 слой & $2$ & $0.5$ & $2$\\\hline
+2 слой & $1$ & $0.3$ & $1$\\\hline
+\end{tabular}
+
+\end{center}
+
+выберем $h=1,$
+тогда $\omega>\frac{40\pi c_{p,1}}{h}=80\pi.$
+Выберем $\omega=250.$
+\end{document}

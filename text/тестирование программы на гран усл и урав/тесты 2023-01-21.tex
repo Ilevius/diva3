@@ -1,0 +1,312 @@
+%2multibyte Version: 5.50.0.2960 CodePage: 1251
+%\usepackage[cp1251]{inputenc}
+%\usepackage{newthm}
+%\renewcommand{\baselinestretch}{1,25}
+
+\documentclass[a4paper,openany,oneside]{article}%
+\usepackage[14pt]{extsizes}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtext}
+\usepackage[unicode]{hyperref}
+\usepackage{cmap}
+\usepackage[cp1251]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage[matrix,arrow,curve]{xy}
+\usepackage{ccaption}
+\usepackage{misccorr}
+\usepackage{indentfirst}
+\usepackage{soul}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{Codepage=1251}
+%TCIDATA{CSTFile=article.cst}
+%TCIDATA{Created=Thursday, December 15, 2016 08:42:37}
+%TCIDATA{LastRevised=Tuesday, January 31, 2023 11:33:37}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{\indent Теорема}[section]
+\newtheorem{proposition}{\indent Предложение}[section]
+\newtheorem{lemma}{\indent Лемма}[section]
+\newtheorem{Characteristic}{\indent Свойство}[section]
+\newtheorem{corollary}{\indent Следствие}[section]
+\newtheorem{criterion}{\indent Критерий}[section]
+\newtheorem{example}{\indent Пример}[section]
+\newtheorem{remark}{\indent Замечание}[section]
+\newtheorem{algorithm}{\indent Алгоритм}
+\newtheorem{axiom}{\indent Аксиома}[section]
+\newtheorem{case}{\indent Случай}[section]
+\newtheorem{claim}{\indent Требование}[section]
+\newtheorem{conclusion}{\indent Заключение}[section]
+\newtheorem{condition}{\indent Условие}[section]
+\newtheorem{conjecture}{\indent Предположение}[section]
+\newtheorem{definition}{\indent Определение}[section]
+\newtheorem{exercise}{\indent Упражнение}[section]
+\newtheorem{problem}{\indent Задача}[section]
+\newtheorem{summary}{\indent Вывод}[section]
+\oddsidemargin 0cm \evensidemargin 0cm \textwidth 16,5cm \topmargin -2cm
+\renewcommand{\baselinestretch}{1,2}
+\textheight 27cm
+\newenvironment{proof}{\par{Д о к а з а т е л ь с т в о.}}{\ $\Box$\vspace{6pt}}
+\pagestyle{myheadings}
+\numberwithin{equation}{section}
+\parindent 1,2cm
+\sloppy
+\begin{document}
+\section{Поле
+источника $\mathbf{u}%
+_{0}$}
+
+\subsection{Фурье-символы}%
+
+
+1. Граничные
+условия
+\[
+\mu\left(  U^{^{\prime}}-i\alpha W\right)  =Q_{1}%
+\]%
+\[
+\lambda\left(  -i\alpha U+W^{^{\prime}}\right)  +2\mu W^{^{\prime}}=Q_{2}%
+\]
+в случае $Q=(0;1)$ (см.
+рис.~\ref{u0_first_boundary} и
+рис.~\ref{u0_second_boundary}
+соотв.)
+\[
+U^{^{\prime}}=i\alpha W
+\]%
+\[
+\left(  \lambda+2\mu\right)  W^{^{\prime}}=1+i\alpha\lambda U
+\]
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{u0 first boundary.jpg}
+\caption{Первое
+граничное
+условие для
+$\mathbf{u}_{0}$}%
+\label{u0_first_boundary}%
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{u0 second boundary.jpg}
+\caption{Второе
+граничное
+условие для
+$\mathbf{u}_{0}$}%
+\label{u0_second_boundary}%
+\end{figure}
+
+2. Уравнения
+Ляме
+\[
+\left(  \lambda+\mu\right)  \left(  -\alpha^{2}U-i\alpha W^{^{\prime}}\right)
++\mu\left(  -\alpha^{2}U+U^{^{\prime\prime}}\right)  +\rho\omega^{2}U=0
+\]%
+\[
+\left(  \mu+\lambda\right)  \left(  -i\alpha U^{^{\prime}}+W^{^{\prime\prime}%
+}\right)  +\mu\left(  -\alpha^{2}W+W^{^{\prime\prime}}\right)  +\rho\omega
+^{2}W=0
+\]
+приведем к
+наглядному
+виду
+\[
+\left(  \rho\omega^{2}-\alpha^{2}\left(  \lambda+2\mu\right)  \right)
+U=i\alpha\left(  \lambda+\mu\right)  W^{^{\prime}}-\mu U^{^{\prime\prime}}%
+\]%
+\[
+\left(  \rho\omega^{2}-\alpha^{2}\mu\right)  W=i\alpha\left(  \mu
++\lambda\right)  U^{^{\prime}}-\left(  2\mu+\lambda\right)  W^{^{\prime\prime
+}}%
+\]
+поскольку $\varkappa
+_{2}^{2}=\frac{\rho\omega^{2}}{\mu}\Rightarrow\rho\omega^{2}=\varkappa_{2}%
+^{2}\mu$
+\[
+\left(  \varkappa_{2}^{2}\mu-\alpha^{2}\left(  \lambda+2\mu\right)  \right)
+U=i\alpha\left(  \lambda+\mu\right)  W^{^{\prime}}-\mu U^{^{\prime\prime}}%
+\]%
+\[
+\left(  \varkappa_{2}^{2}\mu-\alpha^{2}\mu\right)  W=i\alpha\left(
+\mu+\lambda\right)  U^{^{\prime}}-\left(  2\mu+\lambda\right)  W^{^{\prime
+\prime}}%
+\]
+(см. рис.~\ref{u0_first_Lame} и
+рис.~\ref{u0_second_Lame}
+соотв.) \begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{u0 first Lame.jpg}
+\caption{Первое
+уравнение
+Ляме для $\mathbf{u}_{0}$
+при $z=0,3$}%
+\label{u0_first_Lame}%
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{u0 second Lame.jpg}
+\caption{Второе
+уравнение
+Ляме для $\mathbf{u}_{0}$
+при $z=0,3$}%
+\label{u0_second_Lame}%
+\end{figure}
+
+\subsection{Интеграл}
+
+Планируется
+после
+успешной
+проверки
+Фурье-символов.
+Если
+последние
+проверку
+пройдут, а $\mathbf{u}_{0}$ --
+нет, будет
+очевидно,
+что причина
+в интегрировании.
+
+\bigskip
+
+\section{Поля $\mathbf{u}^{-},\mathbf{u}^{+}$}
+
+\subsection{Фурье-символы}%
+
+
+1. Граничные
+условия $\left.  [\mathbf{U}%
+]\right\vert _{z=-h}=0$ (см.
+рис.~\ref{U-_first_boundary} и
+рис.~\ref{W-_first_boundary}
+соотв.)
+\[
+U_{0}+U_{-}=U_{+}%
+\]%
+\[
+W_{0}+W_{-}=W_{+}%
+\]
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{U- first boundary.jpg}
+\caption{Первое
+граничное
+условие для
+$U_{sc}$ при $z=-h$ }%
+\label{U-_first_boundary}%
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{W- first boundary.jpg}
+\caption{Первое
+граничное
+условие для
+$W_{sc}$ при $z=-h$}%
+\label{W-_first_boundary}%
+\end{figure}
+
+2. Граничные
+условия $\left.  [\mathbf{T}%
+]\right\vert _{z=-h}=0$
+\[
+T_{x}=\mu(U^{^{\prime}}-i\alpha W)
+\]%
+\[
+S_{z}=\left(  \lambda+2\mu\right)  W^{^{\prime}}-i\alpha\lambda U
+\]%
+\[
+\left(  U_{0}^{^{\prime}}+U_{-}^{^{\prime}}\right)  U^{^{\prime}}%
+-i\alpha\left(  W_{0}+W_{-}\right)  =U_{+}^{^{\prime}}-i\alpha W_{+}%
+\]%
+\[
+\left(  \lambda+2\mu\right)  \left(  W_{0}^{^{\prime}}+W_{-}^{^{\prime}%
+}\right)  -i\alpha\lambda\left(  U_{0}+U_{-}\right)  =\left(  \lambda
++2\mu\right)  W_{+}^{^{\prime}}-i\alpha\lambda U_{+}%
+\]
+
+
+3. Уравнения
+Ляме
+\[
+\left(  \rho\omega^{2}-\alpha^{2}\left(  \lambda+2\mu\right)  \right)
+U=i\alpha\left(  \lambda+\mu\right)  W^{^{\prime}}-\mu U^{^{\prime\prime}}%
+\]%
+\[
+\left(  \rho\omega^{2}-\alpha^{2}\mu\right)  W=i\alpha\left(  \mu
++\lambda\right)  U^{^{\prime}}-\left(  2\mu+\lambda\right)  W^{^{\prime\prime
+}}%
+\]
+
+
+
+
+Найдем
+производные
+\[
+\mathbf{U}_{-}^{^{\prime}}=\left\{
+\begin{array}
+[c]{l}%
+U_{-}=-\sigma_{1}t_{1}\left(  -i\alpha\right)  e^{-\sigma_{1}\left(
+z+h\right)  }-t_{2}\sigma_{2}^{2}e^{-\sigma_{2}\left(  z+h\right)  }\\
+W_{-}=t_{1}\sigma_{1}^{2}e^{-\sigma_{1}\left(  z+h\right)  }+t_{2}%
+i\alpha\sigma_{2}e^{-\sigma_{2}\left(  z+h\right)  },
+\end{array}
+\right.
+\]%
+\[
+\mathbf{U}_{-}^{^{^{\prime\prime}}}=\left\{
+\begin{array}
+[c]{l}%
+U_{-}=t_{1}\left(  -i\alpha\right)  \sigma_{1}^{2}e^{-\sigma_{1}\left(
+z+h\right)  }+t_{2}\sigma_{2}^{3}e^{-\sigma_{2}\left(  z+h\right)  }\\
+W_{-}=t_{1}\left(  -\sigma_{1}^{3}\right)  e^{-\sigma_{1}\left(  z+h\right)
+}+t_{2}\left(  -i\alpha\right)  \sigma_{2}^{2}e^{-\sigma_{2}\left(
+z+h\right)  },
+\end{array}
+\right.
+\]
+
+
+Подынтегральные
+функции
+имеют вид $\left(
+\mathbf{U}_{ab}\left(  \alpha\right)  +\mathbf{U}_{ab}\left(  -\alpha\right)
+\right)  e^{i\alpha x},$ что
+может
+вызвать
+проблемы
+если поля
+нечетные. 
+
+\subsection{Интегралы}
+
+Планируется
+после
+успешной
+проверки
+Фурье-символов.
+Если
+последние
+проверку
+пройдут, а $\mathbf{u}_{+}$ --
+нет, будет
+очевидно,
+что причина
+в интегрировании.
+\end{document}
